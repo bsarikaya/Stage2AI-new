@@ -19,11 +19,11 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
+title: "AI Architecture in 6G Mobile Network"
 abbrev: "TODO - Abbreviation"
 category: info
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-sascch-6gip-aiagentarch-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
@@ -44,10 +44,30 @@ venue:
   latest: https://example.com/LATEST
 
 author:
- -
-    fullname: Your Name Here
-    organization: Your Organization Here
-    email: your.email@example.com
+author:
+- ins: B. Sarikaya
+  org: Unaffiliated
+  name: Behcet Sarikaya
+  city: Dallas, TX
+  code: 75252
+  country: USA
+  email: sarikaya@ieee.org
+- ins: R. Schott
+  name: Roland Schott
+  org: Deutsche Telekom
+  abbrev: Deutsche Telekom
+  street: Deutsche-Telekom-Allee 9
+  city: Darmstadt
+  code: 64295
+  country: Germany
+  email: Roland.Schott@telekom.de
+ - ins: V. Chintha
+  name: Venkat Chintha
+  org: Nokia Research
+  city: Dallas
+  code: 
+  country: USA
+  email:  
 
 normative:
 
