@@ -37,7 +37,7 @@ Venkat Chintha · outline for co-author discussion · baseline TR 23.801-01 V0.9
 - **3GPP (SV#18.6, 18.22, 18.1, 18.19):** correlation ID proposed, FFS; self-reported, not tamper-evident.
 - **Contribution:** signed YANG provenance, AUDIT records, common time reference linking change to effect.
 
-**Questions for co-authors:** (1) draft name, and who creates `draft-*.md` (it triggers repo setup); (2) how per-author files merge before -00; (3) -00 by early Jan (AINETOPS BoF cut-off 12 Jan 2027) or by 22 Feb 2027?
+**Questions for co-authors:** (1) §5 into `draft-sascch-6gai-agent-arch` now, or skeleton first; (2) how per-author files merge before -00; (3) -00 by early Jan (AINETOPS BoF cut-off 12 Jan 2027) or by 22 Feb 2027?
 
 ---
 
@@ -53,7 +53,7 @@ Venkat Chintha · outline for co-author discussion · baseline TR 23.801-01 V0.9
 - §6 RAN: consistent with -01's "currently unknown" statement on RAN agents.
 - §7: consolidated asks of NETCONF/YANG, WIMSE/OAuth, AUDIT, AgentProto, DAWN.
 - §8: builds on -01 §5 and SA3 TR 33.801-01 KI#8.2, KI#6.3.
-- Draft name is for Behcet to choose. The repo's setup workflow runs only on a file named `draft-*`, which is why this outline uses a different name.
+- Draft name: `draft-sascch-6gai-agent-arch` (set by Behcet, 27 Oct 2026). Editor's Copy: https://bsarikaya.github.io/Stage2AI-new/draft-sascch-6gai-agent-arch.html
 
 Each subsection in §5 of the draft follows the same pattern: the problem in 6G terms; what TR 23.801-01 proposes and what is agreed; the gap; and what the management plane and IETF protocols must expose or enforce.
 
