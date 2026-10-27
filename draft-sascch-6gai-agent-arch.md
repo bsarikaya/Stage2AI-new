@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+# area: AREA
+# workgroup: WG Working Group
 keyword:
  - next generation
  - unicorn
  - AI-native
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+#  group: WG
+#  type: Working Group
+#  mail: WG@example.com
+#  arch: https://example.com/WG
+  github: "bsarikaya/Stage2AI-new"
+  latest: "https://bsarikaya.github.io/Stage2AI-new/draft-sascch-6gai-agent-arch.html"
 
 author:
 - ins: B. Sarikaya
@@ -43,9 +43,9 @@ author:
 - ins: V. Chintha
   name: Venkat Chintha
   city: Dallas
-  code: 
+  code:
   country: USA
-  email:  
+  email:
 
 normative:
 
