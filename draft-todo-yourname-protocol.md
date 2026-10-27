@@ -44,7 +44,6 @@ venue:
   latest: https://example.com/LATEST
 
 author:
-author:
 - ins: B. Sarikaya
   org: Unaffiliated
   name: Behcet Sarikaya
@@ -61,9 +60,8 @@ author:
   code: 64295
   country: Germany
   email: Roland.Schott@telekom.de
- - ins: V. Chintha
+- ins: V. Chintha
   name: Venkat Chintha
-  org: Nokia Research
   city: Dallas
   code: 
   country: USA
