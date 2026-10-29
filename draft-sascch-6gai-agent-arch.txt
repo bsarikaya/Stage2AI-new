@@ -63,9 +63,10 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-   2.  Security Considerations
-   3.  IANA Considerations
-   4.  Normative References
+   2.  NW-Agent and Intent Serving Function
+   3.  Security Considerations
+   4.  IANA Considerations
+   5.  Normative References
    Acknowledgments
    Authors' Addresses
 
@@ -74,7 +75,8 @@ Table of Contents
    TODO Introduction
 
    Intents are what is new to 3GPP in 6G.  Intent Serving Function (ISF)
-   is defined to handle intents. # Conventions and Definitions
+   is defined to handle intents.  We explain the intent processing in
+   6G. # Conventions and Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -82,15 +84,20 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-2.  Security Considerations
+2.  NW-Agent and Intent Serving Function
+
+   Intents are declative service requests coming UE or other Application
+   Functions (AF).  Execution of intents takes several steps.
+
+3.  Security Considerations
 
    TODO Security
 
-3.  IANA Considerations
+4.  IANA Considerations
 
    This document has no IANA actions.
 
-4.  Normative References
+5.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
