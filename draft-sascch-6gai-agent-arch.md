@@ -64,11 +64,14 @@ TODO Abstract
 
 TODO Introduction
 
-Intents are what is new to 3GPP in 6G. Intent Serving Function (ISF) is defined to handle intents.
+Intents are what is new to 3GPP in 6G. Intent Serving Function (ISF) is defined to handle intents. We explain the intent processing in 6G.
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
+# NW-Agent and Intent Serving Function
+
+Intents are declative service requests coming UE or other Application Functions (AF). Execution of intents takes several steps.
 
 # Security Considerations {#security}
 
