@@ -5,9 +5,9 @@
 Network Working Group                                        B. Sarikaya
 Internet-Draft                                              Unaffiliated
 Intended status: Informational                                 R. Schott
-Expires: 30 April 2027                                  Deutsche Telekom
+Expires: 2 May 2027                                     Deutsche Telekom
                                                               V. Chintha
-                                                         27 October 2026
+                                                         29 October 2026
 
 
                   AI Architecture in 6G Mobile Network
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 April 2027.
+   This Internet-Draft will expire on 2 May 2027.
 
 Copyright Notice
 
@@ -63,10 +63,9 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-   2.  Conventions and Definitions
-   3.  Security Considerations
-   4.  IANA Considerations
-   5.  Normative References
+   2.  Security Considerations
+   3.  IANA Considerations
+   4.  Normative References
    Acknowledgments
    Authors' Addresses
 
@@ -74,7 +73,8 @@ Table of Contents
 
    TODO Introduction
 
-2.  Conventions and Definitions
+   Intents are what is new to 3GPP in 6G.  Intent Serving Function (ISF)
+   is defined to handle intents. # Conventions and Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -82,15 +82,15 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Security Considerations
+2.  Security Considerations
 
    TODO Security
 
-4.  IANA Considerations
+3.  IANA Considerations
 
    This document has no IANA actions.
 
-5.  Normative References
+4.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
