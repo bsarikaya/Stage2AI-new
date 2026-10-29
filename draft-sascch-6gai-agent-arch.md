@@ -64,7 +64,7 @@ TODO Abstract
 
 TODO Introduction
 
-
+Intents are what is new to 3GPP in 6G. Intent Serving Function (ISF) is defined to handle intents.
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
