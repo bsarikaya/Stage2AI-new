@@ -3,6 +3,9 @@
 Venkat Chintha · outline for co-author discussion · baseline TR 23.801-01 V0.9.0 + SA2#177 agreements; architecture-neutral (SV#18.1/18.2/18.3). Details in the appendix.
 
 ## 1. Proposed skeleton (for Behcet and Roland to decide)
+Venkat attention: 
+https://datatracker.ietf.org/meeting/126/materials/slides-126-dmsc-6g-progress-on-multi-agent-collaboration-01
+has good slides
 
 | § | Section | Content | Owner |
 |---|---|---|---|
