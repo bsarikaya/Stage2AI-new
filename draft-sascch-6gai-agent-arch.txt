@@ -5,9 +5,9 @@
 Network Working Group                                        B. Sarikaya
 Internet-Draft                                              Unaffiliated
 Intended status: Informational                                 R. Schott
-Expires: 2 May 2027                                     Deutsche Telekom
+Expires: 3 May 2027                                     Deutsche Telekom
                                                               V. Chintha
-                                                         29 October 2026
+                                                         30 October 2026
 
 
                   AI Architecture in 6G Mobile Network
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 May 2027.
+   This Internet-Draft will expire on 3 May 2027.
 
 Copyright Notice
 
