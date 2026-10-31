@@ -27,6 +27,10 @@ has good slides
 
 ## 3. Pre-action verification
 
+https://datatracker.ietf.org/doc/draft-cui-dns-native-agent-naming-resolution/
+good draft on ai agent naming
+
+
 - **3GPP (SV#18.1, SV#18.22, SV#18.6):** five-outcome action evaluation proposed, not agreed; no live-state inputs.
 - **Contribution:** state the management plane must expose for the check (RFC 6241, RFC 8342, digital twin).
 
