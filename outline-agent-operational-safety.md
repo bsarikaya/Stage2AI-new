@@ -1,6 +1,6 @@
 # Outline: Operating AI Agents Safely in the 6G System
 
-Venkat Chintha · outline for co-author discussion · baseline TR 23.801-01 V0.9.0 + SA2#177 agreements; architecture-neutral (SV#18.1/18.2/18.3). Details in the appendix.
+Venkat Chintha · outline for co-author discussion · baseline TR 23.801-01 V0.10.0 (incl. SA2#177 agreements); architecture-neutral (SV#18.1/18.2/18.3). Details in the appendix.
 
 ## 1. Proposed skeleton (for Behcet and Roland to decide)
 Venkat attention: 
@@ -36,12 +36,12 @@ good draft on ai agent naming
 
 ## 4. Rollback and containment
 
-- **3GPP (SV#18.22, SV#18.15, SV#18.9):** fallback to default/last-known config proposed; no multi-NF plan rollback.
+- **3GPP (SV#18.22, SV#18.15):** fallback to default/last-known config proposed; no multi-NF plan rollback.
 - **Contribution:** multi-target confirmed commit (RFC 6241 §8.4); suspend/revoke independent of the agent.
 
 ## 5. Attribution
 
-- **3GPP (SV#18.6, 18.22, 18.1, 18.19):** correlation ID proposed, FFS; self-reported, not tamper-evident.
+- **3GPP (SV#18.6, 18.22, 18.1, 18.19):** correlation ID proposed; self-reported, not tamper-evident.
 - **Contribution:** signed YANG provenance, AUDIT records, common time reference linking change to effect.
 
 **Questions for co-authors:** (1) §5 into `draft-sascch-6gai-agent-arch` now, or skeleton first; (2) how per-author files merge before -00; (3) -00 by early Jan (AINETOPS BoF cut-off 12 Jan 2027) or by 22 Feb 2027?
@@ -52,7 +52,7 @@ good draft on ai agent naming
 
 ### A.0 Baseline and skeleton notes
 
-- Baseline: 3GPP TR 23.801-01 V0.9.0 (2026-09) plus the interim agreements approved at SA2#177 (S2-2611398, S2-2611400). 3GPP text is paraphrased and cited by clause; no option among SV#18.1, SV#18.2 and SV#18.3 is assumed.
+- Baseline: 3GPP TR 23.801-01 V0.10.0 (2026-10), which includes the interim agreements approved at SA2#177 (S2-2611398 as cl. 7.1.18.1, S2-2611400 as cl. 7.1.19.1). 3GPP text is paraphrased and cited by clause; no option among SV#18.1, SV#18.2 and SV#18.3 is assumed.
 - §1 Introduction: relation to draft-sarischo-6gip-aiagent-requirements-01 (Stage 1); scope is AI in the 6G system only; what "Stage 2" means in an IETF document.
 - §2 Terminology: AI agent (TR 22.870), intent (TR 23.801-01 KI#18 NOTE 3), aligned with DAWN terms.
 - §3: KI#18 "AI for 6G architecture", KI#19 "6G Network for AI".
@@ -68,7 +68,7 @@ Each subsection in §5 of the draft follows the same pattern: the problem in 6G 
 
 - **TR 23.801-01:** KI#18 bullet 6 (operator-configurable autonomy levels, including no AI). SV#18.22: operator control decides whether AI-driven requests and actions are allowed; autonomy levels per slice/DNN, NF, UE group or application; an OAM-configured "boundary allowed" listing permitted NFs, NF service APIs, slices, UEs and services (cl. 6.18.22). SV#18.15: exploration bounded by operator policy. Agreed (S2-2611398): authorisation of intent requests per service or per UE/AF, and per-NF (de)activation of AI. For UE agents (S2-2611400): a preconfigured agent ID, used for authorisation.
 - **Gap:** network-side agents have no per-agent credential or authority object. How autonomy is "unlocked" is not defined. The Stage 1 draft (§2.7) covers access to resources, not what an authorised agent may change.
-- **IETF side:** express authority as a scoped, time-limited, revocable grant bound to one task (WIMSE AIMS, OAuth Transaction Tokens), enforced on the managed side (NACM, RFC 8341). Cite ICON CTL-3/4/5 for the requirements rather than restating them.
+- **IETF side:** express authority as a scoped, time-limited, revocable grant bound to one task (WIMSE AIMS, OAuth Transaction Tokens), enforced on the managed side (NACM, RFC 8341). Cite ICON (-02) CTL-7/8/9 for the requirements rather than restating them.
 
 ### A.2 Pre-action verification — checks before an action reaches the live network
 
@@ -78,13 +78,13 @@ Each subsection in §5 of the draft follows the same pattern: the problem in 6G 
 
 ### A.3 Rollback and containment — when an action goes wrong
 
-- **TR 23.801-01:** SV#18.22: the network shall always be able to switch to default procedures without AI; forced or graceful switch (FFS whether both are needed); rollback to a previously known-safe state; forcing an NF back to its last known configuration; the intermediary can stop forwarding tool calls from agents. SV#18.15: stop or revert exploratory actions. SV#18.9: fallback from 6G to 5G. Agreed: only for KI#19, where the network or the consumer can terminate an AI service.
+- **TR 23.801-01:** SV#18.22: the network shall always be able to switch to default procedures without AI; forced or graceful switch (FFS whether both are needed); rollback to a previously known-safe state; forcing an NF back to its last known configuration; the intermediary can stop forwarding tool calls from agents. SV#18.15: stop or revert exploratory actions. (SV#18.9 is 6G-to-5G interworking fallback, not rollback.) Agreed: only for KI#19, where the network or the consumer can terminate an AI service.
 - **Gap:** no rollback for a plan that has partly executed across several NFs. Service continuity during the switch is FFS. None of this is in the KI#18 interim agreements.
 - **IETF side:** confirmed commit with automatic revert on timeout (RFC 6241 §8.4) is the single-device model; the draft should state what a multi-target equivalent needs (a shared rollback handle, ordering, health conditions that trigger the revert). A suspend or revoke signal on a path independent of the agent. Cite ICON INT-1/INT-2. The Stage 1 hook is -01 §4.1 ("blast radius").
 
 ### A.4 Attribution — which agent changed what, and why
 
-- **TR 23.801-01:** SV#18.6: an intent correlation identifier carried across multi-agent delegation and NF/tool calls, with traceability records of actions, entities and configuration values. SV#18.22: correlation of each candidate action with its explanation, the operator control decision and the result. SV#18.1: audit logs streamed to an Audit Function. SV#18.19: a Monitoring and Adaptation Function that audits execution. Agreed: nothing. S2-2611398 leaves operator control of observability and traceability FFS, and the SA2/SA5 split is open.
+- **TR 23.801-01:** SV#18.6: an intent correlation identifier carried across multi-agent delegation and NF/tool calls, with traceability records of actions, entities and configuration values (cl. 6.18.6.1.2.3). This is not the Intent Correlation ID of cl. 6.18.7, which groups related intents of one requester and whose need is FFS. SV#18.22: correlation of each candidate action with its explanation, the operator control decision and the result. SV#18.1: audit logs streamed to an Audit Function. SV#18.19: a Monitoring and Adaptation Function that audits execution. Agreed: nothing. S2-2611398 leaves operator control of observability and traceability FFS, and the SA2/SA5 split is open.
 - **Gap:** records are self-reported by the acting entity; they are not tamper-evident; there is no common time reference linking a change to its effect on performance counters.
 - **IETF side:** signed provenance of YANG data (draft-ietf-opsawg-yang-provenance), cross-domain audit of delegation chains (AUDIT, if chartered), incident linkage (draft-ietf-nmop-network-incident-yang). The open question for the co-authors: whether attribution may rely on the agent's own record or must come from independent observation.
 
