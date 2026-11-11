@@ -11,25 +11,25 @@
 <meta content="
        TODO Abstract 
     " name="description">
-<meta content="xml2rfc 3.34.1" name="generator">
+<meta content="xml2rfc 3.35.0" name="generator">
 <meta content="next generation" name="keyword">
 <meta content="unicorn" name="keyword">
 <meta content="AI-native" name="keyword">
 <meta content="draft-sascch-6gai-agent-arch-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.34.1
-    Python 3.14.8
-    ConfigArgParse 1.8.0
+  xml2rfc 3.35.0
+    Python 3.14.10
+    ConfigArgParse 1.9.0
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.1.1
     natsort 8.4.0
-    platformdirs 4.13.4
+    platformdirs 4.14.3
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.33.1
-    wcwidth 0.9.2
+    wcwidth 0.9.4
 -->
 <link href="draft-sascch-6gai-agent-arch.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1030,7 +1030,7 @@ svg {
   & :is([stroke="white"], [stroke^="#fff"]) {
     stroke: var(--background-color);
   }
-  & :is([fill="black"], [fill^="#000"], :not([fill])) {
+  & :is([fill="black"], [fill^="#000"], :not([fill], [fill] *)) {
     fill: var(--text-color);
   }
   & :is([fill="white"], [fill^="#fff"]) {
@@ -1045,11 +1045,11 @@ svg {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">TODO - Abbreviation</td>
-<td class="right">October 2026</td>
+<td class="right">November 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Sarikaya, et al.</td>
-<td class="center">Expires 4 May 2027</td>
+<td class="center">Expires 15 May 2027</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1062,12 +1062,12 @@ svg {
 <dd class="internet-draft">draft-sascch-6gai-agent-arch-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-10-31" class="published">31 October 2026</time>
+<time datetime="2026-11-11" class="published">11 November 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2027-05-04">4 May 2027</time></dd>
+<dd class="expires"><time datetime="2027-05-15">15 May 2027</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1119,7 +1119,7 @@ svg {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 4 May 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 15 May 2027.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1155,19 +1155,50 @@ svg {
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-nw-agent-and-intent-serving" class="internal xref">NW-Agent and Intent Serving Function</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-operating-ai-agents-safely" class="internal xref">Operating AI Agents Safely</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
+                <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-status-in-3gpp-and-approach" class="internal xref">Status in 3GPP and Approach</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
+                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-scope-of-authority" class="internal xref">Scope of Authority</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.3">
+                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-pre-action-verification" class="internal xref">Pre-Action Verification</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.4">
+                <p id="section-toc.1-1.3.2.4.1"><a href="#section-3.4" class="auto internal xref">3.4</a>.  <a href="#name-rollback-and-containment" class="internal xref">Rollback and Containment</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.5">
+                <p id="section-toc.1-1.3.2.5.1"><a href="#section-3.5" class="auto internal xref">3.5</a>.  <a href="#name-attribution" class="internal xref">Attribution</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.6">
+                <p id="section-toc.1-1.3.2.6.1"><a href="#section-3.6" class="auto internal xref">3.6</a>.  <a href="#name-summary" class="internal xref">Summary</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1195,37 +1226,413 @@ appear in all capitals, as shown here.<a href="#section-1-3" class="pilcrow">¶<
 <p id="section-2-1">Intents are declative service requests coming UE or other Application Functions (AF). Execution of intents takes several steps.<a href="#section-2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="security">
+<div id="safe-operation">
 <section id="section-3">
-      <h2 id="name-security-considerations">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      <h2 id="name-operating-ai-agents-safely">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-operating-ai-agents-safely" class="section-name selfRef">Operating AI Agents Safely</a>
       </h2>
-<p id="section-3-1">TODO Security<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">The solution variants (SVs) for Key Issue (KI) #18 in <span>[<a href="#TR23.801-01" class="cite xref">TR23.801-01</a>]</span> let an AI agent turn an intent into actions on network functions (NFs). This section looks at what an operator needs before allowing that on a live network: a bound on what the agent may change, a check before a change is applied, a way to undo a change and to stop the agent, and a record of who changed what. For each of the four, it describes where 3GPP stands, what is still open, and which IETF work can be reused.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<div id="safe-status">
+<section id="section-3.1">
+        <h3 id="name-status-in-3gpp-and-approach">
+<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-status-in-3gpp-and-approach" class="section-name selfRef">Status in 3GPP and Approach</a>
+        </h3>
+<p id="section-3.1-1">At the time of writing, the only interim agreement on operator control under KI#18 is clause 7.1.18.1 of <span>[<a href="#TR23.801-01" class="cite xref">TR23.801-01</a>]</span>. It states that the 6G core network supports authorising or controlling the sending of intent requests per requested service or per User Equipment (UE) or Application Function (AF), and supports activating and deactivating AI capabilities per NF. Whether and how the operator controls AI observability and traceability is for further study, and the details of control through operations, administration and maintenance (OAM) are left to 3GPP SA WG5. Everything else cited below from clause 6.18 is a proposal in an SV, not an agreement. Agreed text for KI#19 (clauses 7.1.19.1 and 7.1.19.2) is cited where it is relevant and is marked as KI#19.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-2">The choice between NW-Agent functions and an ISF (clause 6.18.1), intent handling embedded in existing NFs, with or without AI (clause 6.18.2), and a separate AI domain (clause 6.18.3) is also open. This section therefore uses three role names that do not depend on that choice:<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-3.1-3">
+          <dt id="section-3.1-3.1">agent:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.1-3.2">
+            <p id="section-3.1-3.2.1">The entity that plans and invokes actions to fulfil an intent, for example the NW-Agent functions or the intent fulfilment logic of the ISF. The term names a role. An NW-Agent function can play it, but the two terms are not the same.<a href="#section-3.1-3.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.1-3.3">enforcement point:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.1-3.4">
+            <p id="section-3.1-3.4.1">An entity under operator control that decides whether an action proposed by an agent is applied. Examples are the intermediary that SV#18.1 places under operator control in the NW-Agent option, the gateway function of the ISF, and the target itself.<a href="#section-3.1-3.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.1-3.5">target:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.1-3.6">
+            <p id="section-3.1-3.6.1">The NF, or the management service of an NF, on which an action is performed.<a href="#section-3.1-3.6.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-3.1-4">Actions reach a target on two paths: at run time, as service operations over the service-based interface or as tool invocations over a tool-based interface, and through the management plane, as configuration changes made through OAM. The requirements below apply to both. Several of the IETF mechanisms cited come from NETCONF and RESTCONF. They are cited to show that a property is already specified for network management, not to suggest that 3GPP NFs are configured with these protocols. Whether and how any of them is used with 3GPP interfaces is for the groups concerned to decide.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+<p id="section-3.1-5">None of these requirements is specific to AI. They apply to any automation that changes a network. They become necessary with agents because the actions are selected at run time instead of being written and reviewed in advance, and because an agent can act faster than a person can review. Where <span>[<a href="#I-D.mcw-opsawg-icon-requirements" class="cite xref">I-D.mcw-opsawg-icon-requirements</a>]</span> or <span>[<a href="#I-D.ietf-wimse-aims" class="cite xref">I-D.ietf-wimse-aims</a>]</span> already states a requirement, it is repeated here only to relate it to the 3GPP entities and to the 3GPP status. The analysis of the gap in 3GPP is what this section adds.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
+<p id="section-3.1-6">The requirements are numbered for discussion. The key words in them describe what an operator needs from a solution, whether it is built from 3GPP procedures, IETF protocols or both. They do not place conformance obligations on implementations of this document.<a href="#section-3.1-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="safe-authority">
+<section id="section-3.2">
+        <h3 id="name-scope-of-authority">
+<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-scope-of-authority" class="section-name selfRef">Scope of Authority</a>
+        </h3>
+<p id="section-3.2-1">In the 5G service-based architecture, access to NF services is authorised with OAuth 2.0 access tokens issued by the Network Repository Function (NRF) (clause 13.4.1 of <span>[<a href="#TS33.501" class="cite xref">TS33.501</a>]</span>). A token names the consumer NF instance, the producer NF type or producer NF instances, the services, optionally the operations and resources, optionally a list of slices or NF sets, and an expiry time. The claims defined in that clause do not include the task or intent being served, the UEs or parameter values affected, or the size of a change. Annex X of <span>[<a href="#TS33.501" class="cite xref">TS33.501</a>]</span> adds a claim that names the source NF when an intermediary NF acts on its behalf, but only for the network automation services of that annex, such as access to data, analytics and AI/ML models. Token revocation is not supported.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-2">For agents, SV#18.22 proposes a boundary of allowed NFs, NF services, slices, UEs and services that OAM configures statically (clause 6.18.22.1.1.1 of <span>[<a href="#TR23.801-01" class="cite xref">TR23.801-01</a>]</span>), and autonomy levels that can be raised or lowered (clause 6.18.22.0). Neither the boundary nor the autonomy levels are agreed, and the SV itself notes that configuration through OAM cannot guarantee control in real time. The agreed UE AI agent identifier (KI#19, clause 7.1.19.1) applies to operator-controlled agents on UEs. No agreed text defines an identifier or a credential for an agent in the network. Some SVs propose that agents register with an agent identifier (for example clause 6.18.17.0), but they do not say how it is authenticated or tied to authority. <span>[<a href="#TR33.801-01" class="cite xref">TR33.801-01</a>]</span> has no key issue dedicated to KI#18. Its key issue on agentic exposure (clause 5.6.3.3) covers the exposure aspects of KI#18 and KI#19, and in its clause on UE AI agent security (clause 5.8.1) the aspects related to KI#18 are marked for further study.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+<p id="section-3.2-3">The agreed controls decide who may send an intent and whether an NF may use AI. They do not state what a particular agent may change while it fulfils a particular intent.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-3.2-4">
+          <dt id="section-3.2-4.1">AUTH-1:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.2-4.2">
+            <p id="section-3.2-4.2.1">Authority <span class="bcp14">MUST</span> be given to an agent as an explicit grant issued by a function under operator control. An agent <span class="bcp14">MUST NOT</span> be able to issue or widen its own grant.<a href="#section-3.2-4.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.2-4.3">AUTH-2:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.2-4.4">
+            <p id="section-3.2-4.4.1">A grant <span class="bcp14">MUST</span> identify the agent and the intent or task it serves, and <span class="bcp14">MUST</span> list the permitted operations and targets, for example NF instances, slices and UE groups. It <span class="bcp14">SHOULD</span> be able to carry limits on the size and rate of change. Anything that is not listed is not permitted.<a href="#section-3.2-4.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.2-4.5">AUTH-3:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.2-4.6">
+            <p id="section-3.2-4.6.1">A grant <span class="bcp14">MUST</span> expire. Its lifetime <span class="bcp14">SHOULD</span> follow the task, not a general token lifetime set for the whole network.<a href="#section-3.2-4.6.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.2-4.7">AUTH-4:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.2-4.8">
+            <p id="section-3.2-4.8.1">The operator <span class="bcp14">MUST</span> be able to revoke a grant before it expires. Operator policy sets an upper bound on the time until a revocation takes effect at the enforcement point, and the operator <span class="bcp14">MUST</span> be able to observe that the bound is met.<a href="#section-3.2-4.8.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.2-4.9">AUTH-5:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.2-4.10">
+            <p id="section-3.2-4.10.1">When an agent delegates part of a task to another agent, the derived grant <span class="bcp14">MUST NOT</span> exceed the original in any respect, and the chain of delegation <span class="bcp14">MUST</span> be recorded.<a href="#section-3.2-4.10.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.2-4.11">AUTH-6:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.2-4.12">
+            <p id="section-3.2-4.12.1">Grants <span class="bcp14">MUST</span> be checked at an enforcement point that the agent cannot modify or bypass. A request outside the grant <span class="bcp14">MUST</span> be refused, and the refusal <span class="bcp14">MUST</span> be reported to the operator.<a href="#section-3.2-4.12.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-3.2-5">Several related IETF specifications exist. <span>[<a href="#I-D.ietf-wimse-aims" class="cite xref">I-D.ietf-wimse-aims</a>]</span> gives each agent a unique identifier, uses OAuth for delegation, states that the scope of a token obtained by exchange never exceeds that of the token presented, and relies on short-lived credentials and on revocation and risk signals. Transaction tokens <span>[<a href="#I-D.ietf-oauth-transaction-tokens" class="cite xref">I-D.ietf-oauth-transaction-tokens</a>]</span> bind authorisation context to a single transaction within a trust domain. Rich Authorization Requests <span>[<a href="#RFC9396" class="cite xref">RFC9396</a>]</span> can carry typed, structured permissions; a type that expresses slices, NF instances, UE groups and numeric limits would have to be defined, and the authors are not aware of one. Token exchange <span>[<a href="#RFC8693" class="cite xref">RFC8693</a>]</span> records the acting party and earlier actors in the "act" claim. For configuration data, the NETCONF Access Control Model (NACM) <span>[<a href="#RFC8341" class="cite xref">RFC8341</a>]</span> shows enforcement at the managed server down to individual data nodes, but its rules are per user or group and have no notion of task, lifetime or delegation. A grant also needs a stable identifier for the agent. DNS-based agent naming such as <span>[<a href="#I-D.cui-dns-native-agent-naming-resolution" class="cite xref">I-D.cui-dns-native-agent-naming-resolution</a>]</span> is one way to provide a name that stays the same across versions of an agent. <span>[<a href="#I-D.mcw-opsawg-icon-requirements" class="cite xref">I-D.mcw-opsawg-icon-requirements</a>]</span> has requirements on restricting the scope of a network management agent to given domains, devices, protocols and tools, and on raising and lowering its level of authorisation. It does not require a grant that is tied to a task, that expires, or that cannot be widened on delegation.<a href="#section-3.2-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="safe-verification">
+<section id="section-3.3">
+        <h3 id="name-pre-action-verification">
+<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-pre-action-verification" class="section-name selfRef">Pre-Action Verification</a>
+        </h3>
+<p id="section-3.3-1">SV#18.22 proposes that operator control may evaluate selected AI-derived candidate actions, namely those that change network state or service behaviour that is visible from outside, before they are enforced, where operator policy so provides. The evaluation has five possible dispositions: it can allow the action, allow it within a narrower scope, ask for more explanation or context, redirect it to a defined or default procedure, or deny it (clause 6.18.22.0 of <span>[<a href="#TR23.801-01" class="cite xref">TR23.801-01</a>]</span>). A note adds that the evaluation of an explanation does not authorise an action that is prohibited on other grounds, such as operator policy or security requirements. SV#18.1 describes an intermediary under operator control that verifies intents, plans and candidate actions before enforcement (clause 6.18.1.1.1.1). SV#18.6 has an optional step in which, if digital twin simulation is supported and enabled by operator policy, the executing function may invoke the digital twin for validation before the live invocation (clause 6.18.6.2.5); the text does not say what is validated or how the result is used. None of this is agreed. In the ISF option, the gateway function is listed both with translating invocation requests into service requests and with authorising, auditing and verifying intent actions; whether it is deployed separately is for further study (clause 6.18.1.1.1.2). The intermediary of SV#18.1 may likewise be co-located with the NW-Agent function. If the gateway function or the intermediary is also part of the agent, it cannot satisfy VER-1 by itself.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
+<p id="section-3.3-2">Two precedents exist on the management side. In coordination of self-organising network (SON) functions (clause 4.7.4.2 of <span>[<a href="#TS28.628" class="cite xref">TS28.628</a>]</span>), a SON function can request permission from a coordination function before it changes certain parameters. The coordination function typically bases its answer on inputs such as the current and the proposed values and the likely impact on other objects and on performance indicators. Intent-driven management (clause 5.3.3 of <span>[<a href="#TS28.312" class="cite xref">TS28.312</a>]</span>) has a feasibility check of an intent before fulfilment, which can use network digital twin functions to simulate the resulting management tasks. It does not define a check that is applied to each configuration change made while the intent is fulfilled.<a href="#section-3.3-2" class="pilcrow">¶</a></p>
+<p id="section-3.3-3">The proposed evaluation is defined mainly by its results. The input it may consider is listed only at a high level (clause 6.18.22.1.1.0 of <span>[<a href="#TR23.801-01" class="cite xref">TR23.801-01</a>]</span>): the action and its category, the affected scope and expected impact, explainability-related information, confidence, operator policy and validity information. The details are for further study. The list does not include whether the state the agent acted on is still current, whether the action can be undone, or what the state was before.<a href="#section-3.3-3" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-3.3-4">
+          <dt id="section-3.3-4.1">VER-1:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.3-4.2">
+            <p id="section-3.3-4.2.1">The check <span class="bcp14">MUST</span> be performed by an entity other than the agent that proposes the action. Its result <span class="bcp14">MUST NOT</span> rest only on information supplied by that agent.<a href="#section-3.3-4.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.3-4.3">VER-2:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.3-4.4">
+            <p id="section-3.3-4.4.1">A request to change a target <span class="bcp14">MUST</span> identify the version of the target's state on which the agent based its decision. The change <span class="bcp14">MUST</span> be refused if the part of that state on which the decision relied has changed since.<a href="#section-3.3-4.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.3-4.5">VER-3:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.3-4.6">
+            <p id="section-3.3-4.6.1">The check <span class="bcp14">MUST</span> detect other changes that are pending or in progress on the same target, whether they come from another agent, an automated control loop or a person.<a href="#section-3.3-4.6.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.3-4.7">VER-4:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.3-4.8">
+            <p id="section-3.3-4.8.1">Each action <span class="bcp14">MUST</span> be marked as reversible or not reversible. An action that cannot be undone <span class="bcp14">MUST</span> require a stricter level of approval, set by operator policy.<a href="#section-3.3-4.8.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.3-4.9">VER-5:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.3-4.10">
+            <p id="section-3.3-4.10.1">Before a change is applied, the state of each target <span class="bcp14">MUST</span> be recorded.<a href="#section-3.3-4.10.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.3-4.11">VER-6:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.3-4.12">
+            <p id="section-3.3-4.12.1">A request <span class="bcp14">MUST</span> state its expected effect as one or more observable measurements with thresholds.<a href="#section-3.3-4.12.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.3-4.13">VER-7:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.3-4.14">
+            <p id="section-3.3-4.14.1">The check <span class="bcp14">MUST</span> return one of a closed, documented set of results and <span class="bcp14">MUST</span> record the information on which the result was based. A request that fails VER-2 <span class="bcp14">MUST</span> be refused.<a href="#section-3.3-4.14.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-3.3-5">The recorded state (VER-5) and the expected effect (VER-6) are used later for rollback and for attribution. The five dispositions proposed in SV#18.22 are one candidate for the set of results in VER-7.<a href="#section-3.3-5" class="pilcrow">¶</a></p>
+<p id="section-3.3-6">The IETF and the IRTF have parts of this for configuration management. RESTCONF (<span><a href="https://rfc-editor.org/rfc/rfc8040#section-3.4.1.2" class="relref">Section 3.4.1.2</a> of [<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>) lets a client send the entity-tag it received when it read configuration data in an "If-Match" header, and the server rejects the edit if the tag no longer matches. The entity-tag reflects configuration data only, not operational state. The NETCONF validate capability (<span><a href="https://rfc-editor.org/rfc/rfc6241#section-8.6" class="relref">Section 8.6</a> of [<a href="#RFC6241" class="cite xref">RFC6241</a>]</span>) checks a proposed configuration at the server without applying it. The Network Management Datastore Architecture (NMDA) <span>[<a href="#RFC8342" class="cite xref">RFC8342</a>]</span> separates intended from operational state. Datastore comparison <span>[<a href="#RFC9144" class="cite xref">RFC9144</a>]</span> reports the differences between two datastores, which can show whether a change has taken effect; it does not record the state before a change. <span>[<a href="#I-D.irtf-nmrg-network-digital-twin-arch" class="cite xref">I-D.irtf-nmrg-network-digital-twin-arch</a>]</span> describes, as a use case, verifying the impact of a change in a network digital twin before it is applied to the production network. None of these defines the check as a whole, and validating a configuration against its data model is not a check of its effect on the network.<a href="#section-3.3-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="safe-rollback">
+<section id="section-3.4">
+        <h3 id="name-rollback-and-containment">
+<a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-rollback-and-containment" class="section-name selfRef">Rollback and Containment</a>
+        </h3>
+<p id="section-3.4-1">SV#18.22 proposes, for some of the architecture options, that the network can always switch to default procedures that do not use AI, in a forced or a graceful way, that default handling may include a return to a previously known safe state, and that an intermediary can stop forwarding tool invocations from agents (clauses 6.18.22.0 and 6.18.22.1.1.2.3 of <span>[<a href="#TR23.801-01" class="cite xref">TR23.801-01</a>]</span>). Whether both forced and graceful switching are needed, and how service continuity is kept during the switch, are open. SV#18.15 has a participating NF stop or revert an exploratory action of reinforcement learning when a safeguard in the exploration policy is breached (clause 6.18.15.2.1.2). For KI#18, the agreed text provides only activation and deactivation of AI capabilities per NF (clause 7.1.18.1). There is no agreed text on stopping an agent or on undoing its changes. For KI#19, the network and the consumer can terminate an AI training or inference service (clause 7.1.19.2), which is termination of a service and not the reversal of actions on NFs.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+<p id="section-3.4-2">Switching AI off for future requests is different from undoing what an agent has already done. A plan that fulfils one intent can change several NFs. SV#18.22 mentions a return to the last known configuration of an NF, but if a plan fails or is stopped halfway, the SVs do not say how the completed steps of a plan that spans several NFs are identified and reversed.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-3.4-3">
+          <dt id="section-3.4-3.1">RBK-1:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.4-3.2">
+            <p id="section-3.4-3.2.1">A plan that changes more than one target <span class="bcp14">MUST</span> have one identifier, carried in every change made under it, so that the changes can be found and reversed as a unit.<a href="#section-3.4-3.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.4-3.3">RBK-2:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.4-3.4">
+            <p id="section-3.4-3.4.1">Reverting a plan, in whole or from a given step, <span class="bcp14">MUST</span> be possible without the cooperation of the agent that created it. The order of reversal <span class="bcp14">MUST</span> be defined.<a href="#section-3.4-3.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.4-3.5">RBK-3:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.4-3.6">
+            <p id="section-3.4-3.6.1">A change <span class="bcp14">SHOULD</span> be provisional until it is confirmed. A provisional change <span class="bcp14">MUST</span> be reverted without waiting for the agent if the expected effect (VER-6) is not observed, or a health condition defined by the operator is breached, within a time defined by the operator. Actions marked as not reversible (VER-4) are outside this requirement.<a href="#section-3.4-3.6.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.4-3.7">RBK-4:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.4-3.8">
+            <p id="section-3.4-3.8.1">The operator <span class="bcp14">MUST</span> be able to suspend an agent and revoke its grants (AUTH-4) on a path that does not pass through the agent. The response <span class="bcp14">MUST</span> distinguish a stop that has been accepted from one that has taken effect.<a href="#section-3.4-3.8.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.4-3.9">RBK-5:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.4-3.10">
+            <p id="section-3.4-3.10.1">Operator policy <span class="bcp14">MUST</span> be able to limit, per plan and per period of time, how many targets, slices and UEs a plan may affect.<a href="#section-3.4-3.10.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.4-3.11">RBK-6:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.4-3.12">
+            <p id="section-3.4-3.12.1">The specification of each kind of action <span class="bcp14">MUST</span> state what happens to established sessions when the action is reverted or the agent is stopped.<a href="#section-3.4-3.12.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-3.4-4">NETCONF confirmed commit (<span><a href="https://rfc-editor.org/rfc/rfc6241#section-8.4" class="relref">Section 8.4</a> of [<a href="#RFC6241" class="cite xref">RFC6241</a>]</span>) is the closest existing model. A change is reverted automatically unless it is confirmed within a timeout, and with a persist identifier a session other than the one that made the change can confirm or cancel it. Confirmed commit applies to one device only. Appendix E.2 of <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span>, which is not normative, describes how a manager can coordinate changes on several devices by locking, validating, taking checkpoints and restoring them on failure. The authors are not aware of an IETF standard for a confirmed commit across several devices, so the entity that coordinates the plan has to provide RBK-1 to RBK-3. <span>[<a href="#I-D.mcw-opsawg-icon-requirements" class="cite xref">I-D.mcw-opsawg-icon-requirements</a>]</span> has requirements on interrupting an agent, including a stop that does not depend on the agent and the distinction between accepted and applied, and on rollback. It does not define an identifier, a protocol or a mapping to 3GPP entities.<a href="#section-3.4-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="safe-attribution">
+<section id="section-3.5">
+        <h3 id="name-attribution">
+<a href="#section-3.5" class="section-number selfRef">3.5. </a><a href="#name-attribution" class="section-name selfRef">Attribution</a>
+        </h3>
+<p id="section-3.5-1">SV#18.6 proposes a correlation identifier for each intent being fulfilled. It is associated with the fulfilment plan and may be used by the participating entities to tie their actions and events together. The actions, the entities involved, the configuration values and the outcomes are stored as traceability information (clause 6.18.6.1.2.3 of <span>[<a href="#TR23.801-01" class="cite xref">TR23.801-01</a>]</span>). The Intent Correlation ID of clause 6.18.7 identifies a set of related intents of one requester, and whether it is needed is for further study. The TR uses similar names for the two identifiers, so the relation between them is not settled either. In SV#18.22, entities record their own reasoning and decision history. In SV#18.1, the access control intermediary produces audit logs for monitoring at request level and sends them to an Audit Function that clause 6.18.1 does not define. SV#18.19 proposes monitoring in which a monitoring function may also check whether execution matched the request; whether this applies is for further study. In the management study, a potential solution for the observability of management agents (clause 9.3.1.4.2.1 of <span>[<a href="#TR32.801-01" class="cite xref">TR32.801-01</a>]</span>) has the management agent report its own operation log, including who invoked the operation, to a consumer that subscribed to it. As noted in <a href="#safe-status" class="auto internal xref">Section 3.1</a>, operator control of observability and traceability is not yet agreed.<a href="#section-3.5-1" class="pilcrow">¶</a></p>
+<p id="section-3.5-2">Several of these proposals have the entity that acted record its own history. Others store or collect records in a separate registry or monitoring function. None requires that the records are kept independently of the acting entity, that they are protected against alteration or loss, or that they carry a time reference with a stated accuracy. Agent identifiers exist for registration and discovery. SV#18.6 lists the agent involved among its traceability information, and SV#18.22 says that traceability information may correlate an action with the decision of operator control and with the result. No proposal states that the record identifies the grant of the requesting agent, or the chain of delegation under which the change was made.<a href="#section-3.5-2" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-3.5-3">
+          <dt id="section-3.5-3.1">ATT-1:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-3.2">
+            <p id="section-3.5-3.2.1">Each change made for an agent <span class="bcp14">MUST</span> carry one or more identifiers that together allow the agent, its grant, the intent and the plan to be retrieved.<a href="#section-3.5-3.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.5-3.3">ATT-2:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-3.4">
+            <p id="section-3.5-3.4.1">The enforcement point <span class="bcp14">MUST</span> produce its own record of each change. The agent's record can explain why a change was made. It <span class="bcp14">MUST NOT</span> be the only evidence of what was changed.<a href="#section-3.5-3.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.5-3.5">ATT-3:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-3.6">
+            <p id="section-3.5-3.6.1">The record <span class="bcp14">MUST</span> show the requester of the intent and every agent in the chain of delegation, not only the identity used on the last hop.<a href="#section-3.5-3.6.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.5-3.7">ATT-4:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-3.8">
+            <p id="section-3.5-3.8.1">A party other than the producer of a record <span class="bcp14">MUST</span> be able to detect that the record has been altered, removed or cut short.<a href="#section-3.5-3.8.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.5-3.9">ATT-5:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-3.10">
+            <p id="section-3.5-3.10.1">Records <span class="bcp14">MUST</span> carry a time from a known source with a stated accuracy, so that a change can be related to performance measurements taken before and after it.<a href="#section-3.5-3.10.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.5-3.11">ATT-6:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-3.12">
+            <p id="section-3.5-3.12.1">Identifiers used for correlation <span class="bcp14">SHOULD NOT</span> contain subscriber identifiers.<a href="#section-3.5-3.12.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-3.5-3.13">ATT-7:</dt>
+          <dd style="margin-left: 1.5em" id="section-3.5-3.14">
+            <p id="section-3.5-3.14.1">The operator <span class="bcp14">MUST</span> be able to set the retention period of records and the rules for access to them.<a href="#section-3.5-3.14.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-3.5-4">NETCONF configuration change notifications <span>[<a href="#RFC6470" class="cite xref">RFC6470</a>]</span> are produced by the server. They identify either the server itself or the user name, session and source host of the management session that made a change, but they have no field for the party on whose behalf it was made. Trace context propagation for NETCONF <span>[<a href="#I-D.ietf-netconf-trace-ctx-extension" class="cite xref">I-D.ietf-netconf-trace-ctx-extension</a>]</span> lets a client attach a W3C trace context to a request, and lets the server add a trace context to the reply and to notifications. It correlates records; it does not authenticate the party that set the value. YANG data provenance <span>[<a href="#I-D.ietf-opsawg-yang-provenance" class="cite xref">I-D.ietf-opsawg-yang-provenance</a>]</span> lets the producer of YANG data sign it, and later parties can add countersignatures. The signatures cover the origin and integrity of the data; nothing in them says who asked for the change. The SCITT architecture <span>[<a href="#RFC9943" class="cite xref">RFC9943</a>]</span> provides append-only logs of signed statements with receipts, which could serve ATT-4. The architecture in <span>[<a href="#I-D.kuehlewind-audit-architecture" class="cite xref">I-D.kuehlewind-audit-architecture</a>]</span>, written for the proposed AUDIT work in the IETF, has the services record what they observe at their own boundary. It states that an agent that records itself cannot by itself deliver non-repudiation to a third party, which is consistent with ATT-2. <span>[<a href="#I-D.ietf-wimse-aims" class="cite xref">I-D.ietf-wimse-aims</a>]</span> lists the minimum content of an audit event for authorisation decisions and requires audit records to be tamper-evident. <span>[<a href="#I-D.mcw-opsawg-icon-requirements" class="cite xref">I-D.mcw-opsawg-icon-requirements</a>]</span> has requirements on accountability, tamper-evident telemetry and an authoritative clock source.<a href="#section-3.5-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="safe-summary">
+<section id="section-3.6">
+        <h3 id="name-summary">
+<a href="#section-3.6" class="section-number selfRef">3.6. </a><a href="#name-summary" class="section-name selfRef">Summary</a>
+        </h3>
+<p id="section-3.6-1"><a href="#safe-summary-table" class="auto internal xref">Table 1</a> summarises the status of the four topics. This document does not ask 3GPP to adopt any of the requirements. They are offered as input for discussion.<a href="#section-3.6-1" class="pilcrow">¶</a></p>
+<span id="name-status-of-the-four-topics-f"></span><div id="safe-summary-table">
+<table class="center" id="table-1">
+          <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-status-of-the-four-topics-f" class="selfRef">Status of the four topics for KI#18 in TR 23.801-01 V0.10.0</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Topic</th>
+              <th class="text-left" rowspan="1" colspan="1">Agreed in 3GPP</th>
+              <th class="text-left" rowspan="1" colspan="1">Proposed, not agreed</th>
+              <th class="text-left" rowspan="1" colspan="1">Open</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Scope of authority</td>
+              <td class="text-left" rowspan="1" colspan="1">Intent sending per service or per UE/AF; AI on or off per NF</td>
+              <td class="text-left" rowspan="1" colspan="1">Static boundary and autonomy levels (SV#18.22)</td>
+              <td class="text-left" rowspan="1" colspan="1">Grant per agent and task; revocation; delegation</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Pre-action verification</td>
+              <td class="text-left" rowspan="1" colspan="1">Nothing</td>
+              <td class="text-left" rowspan="1" colspan="1">Evaluation with five dispositions (SV#18.22); intermediary under operator control (SV#18.1); digital twin step (SV#18.6)</td>
+              <td class="text-left" rowspan="1" colspan="1">State on which the check relies; independence from the agent</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Rollback and containment</td>
+              <td class="text-left" rowspan="1" colspan="1">AI on or off per NF; nothing on rollback or on stopping an agent</td>
+              <td class="text-left" rowspan="1" colspan="1">Switch to default procedures and stop forwarding (SV#18.22); revert of exploratory actions (SV#18.15)</td>
+              <td class="text-left" rowspan="1" colspan="1">Rollback of a plan that spans several NFs; revert triggers; sessions</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Attribution</td>
+              <td class="text-left" rowspan="1" colspan="1">Nothing; control of observability and traceability is for further study</td>
+              <td class="text-left" rowspan="1" colspan="1">Correlation identifier and traceability information (SV#18.6); local decision records (SV#18.22); audit and monitoring functions (SV#18.1, SV#18.19)</td>
+              <td class="text-left" rowspan="1" colspan="1">Independent, protected records; agent identity and grant carried in the record of a change</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+</section>
+</div>
+</section>
+</div>
+<div id="security">
+<section id="section-4">
+      <h2 id="name-security-considerations">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      </h2>
+<p id="section-4-1">TODO Security<a href="#section-4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana">
-<section id="section-4">
+<section id="section-5">
       <h2 id="name-iana-considerations">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-4-1">This document has no IANA actions.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-5-1">This document has no IANA actions.<a href="#section-5-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="sec-normative-references">
-<section id="section-5">
-      <h2 id="name-normative-references">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<div id="sec-combined-references">
+<section id="section-6">
+      <h2 id="name-references">
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
+<section id="section-6.1">
+        <h3 id="name-normative-references">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+        </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-6.2">
+        <h3 id="name-informative-references">
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+        </h3>
+<dl class="references">
+<dt id="I-D.cui-dns-native-agent-naming-resolution">[I-D.cui-dns-native-agent-naming-resolution]</dt>
+        <dd>
+<span class="refAuthor">Cui, Y.</span>, <span class="refTitle">"DNS-Native AI Agent Naming and Resolution"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-cui-dns-native-agent-naming-resolution-02</span>, <time datetime="2026-07-05" class="refDate">5 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-cui-dns-native-agent-naming-resolution-02">https://datatracker.ietf.org/doc/html/draft-cui-dns-native-agent-naming-resolution-02</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-netconf-trace-ctx-extension">[I-D.ietf-netconf-trace-ctx-extension]</dt>
+        <dd>
+<span class="refAuthor">Gagliano, R.</span>, <span class="refAuthor">Rennerskog, C.</span>, <span class="refAuthor">Larsson, K.</span>, and <span class="refAuthor">J. Lindblad</span>, <span class="refTitle">"NETCONF Extension to support Trace Context propagation"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-netconf-trace-ctx-extension-10</span>, <time datetime="2026-10-25" class="refDate">25 October 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-netconf-trace-ctx-extension-10">https://datatracker.ietf.org/doc/html/draft-ietf-netconf-trace-ctx-extension-10</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-oauth-transaction-tokens">[I-D.ietf-oauth-transaction-tokens]</dt>
+        <dd>
+<span class="refAuthor">Tulshibagwale, A.</span>, <span class="refAuthor">Fletcher, G.</span>, and <span class="refAuthor">P. Kasselman</span>, <span class="refTitle">"Transaction Tokens"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-oauth-transaction-tokens-11</span>, <time datetime="2026-07-30" class="refDate">30 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-transaction-tokens-11">https://datatracker.ietf.org/doc/html/draft-ietf-oauth-transaction-tokens-11</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-opsawg-yang-provenance">[I-D.ietf-opsawg-yang-provenance]</dt>
+        <dd>
+<span class="refAuthor">Lopez, D.</span>, <span class="refAuthor">Pastor, A.</span>, <span class="refAuthor">Feng, A. H.</span>, <span class="refAuthor">Pérez, A. M.</span>, and <span class="refAuthor">H. Birkholz</span>, <span class="refTitle">"Applying COSE Signatures for YANG Data Provenance"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-yang-provenance-08</span>, <time datetime="2026-10-27" class="refDate">27 October 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-yang-provenance-08">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-yang-provenance-08</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.ietf-wimse-aims">[I-D.ietf-wimse-aims]</dt>
+        <dd>
+<span class="refAuthor">Kasselman, P.</span>, <span class="refAuthor">Lombardo, J.</span>, <span class="refAuthor">Rosomakho, Y.</span>, <span class="refAuthor">Campbell, B.</span>, <span class="refAuthor">Steele, N.</span>, and <span class="refAuthor">A. Parecki</span>, <span class="refTitle">"AI Identity Management System"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-wimse-aims-01</span>, <time datetime="2026-11-02" class="refDate">2 November 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-wimse-aims-01">https://datatracker.ietf.org/doc/html/draft-ietf-wimse-aims-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.irtf-nmrg-network-digital-twin-arch">[I-D.irtf-nmrg-network-digital-twin-arch]</dt>
+        <dd>
+<span class="refAuthor">Zhou, C.</span>, <span class="refAuthor">Yang, H.</span>, <span class="refAuthor">Duan, X.</span>, <span class="refAuthor">Lopez, D.</span>, <span class="refAuthor">Pastor, A.</span>, <span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Boucadair, M.</span>, and <span class="refAuthor">C. Jacquenet</span>, <span class="refTitle">"Network Digital Twin (NDT): Concepts and Reference Architecture"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-irtf-nmrg-network-digital-twin-arch-13</span>, <time datetime="2026-07-01" class="refDate">1 July 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-irtf-nmrg-network-digital-twin-arch-13">https://datatracker.ietf.org/doc/html/draft-irtf-nmrg-network-digital-twin-arch-13</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.kuehlewind-audit-architecture">[I-D.kuehlewind-audit-architecture]</dt>
+        <dd>
+<span class="refAuthor">Kühlewind, M.</span> and <span class="refAuthor">H. Birkholz</span>, <span class="refTitle">"An Architecture for Auditing Agent Delegation and Interactions"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-kuehlewind-audit-architecture-01</span>, <time datetime="2026-09-07" class="refDate">7 September 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-kuehlewind-audit-architecture-01">https://datatracker.ietf.org/doc/html/draft-kuehlewind-audit-architecture-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.mcw-opsawg-icon-requirements">[I-D.mcw-opsawg-icon-requirements]</dt>
+        <dd>
+<span class="refAuthor">Wu, Q.</span>, <span class="refAuthor">Ceccarelli, D.</span>, <span class="refAuthor">Contreras, L. M.</span>, <span class="refAuthor">King, D.</span>, <span class="refAuthor">Fioccola, G.</span>, and <span class="refAuthor">C. Zhou</span>, <span class="refTitle">"Architecture and Requirements for Observability, Control and Intervention of Network Management Agents"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-mcw-opsawg-icon-requirements-02</span>, <time datetime="2026-10-31" class="refDate">31 October 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-mcw-opsawg-icon-requirements-02">https://datatracker.ietf.org/doc/html/draft-mcw-opsawg-icon-requirements-02</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6241">[RFC6241]</dt>
+        <dd>
+<span class="refAuthor">Enns, R., Ed.</span>, <span class="refAuthor">Bjorklund, M., Ed.</span>, <span class="refAuthor">Schoenwaelder, J., Ed.</span>, and <span class="refAuthor">A. Bierman, Ed.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF)"</span>, <span class="seriesInfo">RFC 6241</span>, <span class="seriesInfo">DOI 10.17487/RFC6241</span>, <time datetime="2011-06" class="refDate">June 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6241">https://www.rfc-editor.org/rfc/rfc6241</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6470">[RFC6470]</dt>
+        <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refTitle">"Network Configuration Protocol (NETCONF) Base Notifications"</span>, <span class="seriesInfo">RFC 6470</span>, <span class="seriesInfo">DOI 10.17487/RFC6470</span>, <time datetime="2012-02" class="refDate">February 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6470">https://www.rfc-editor.org/rfc/rfc6470</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8040">[RFC8040]</dt>
+        <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Bjorklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"RESTCONF Protocol"</span>, <span class="seriesInfo">RFC 8040</span>, <span class="seriesInfo">DOI 10.17487/RFC8040</span>, <time datetime="2017-01" class="refDate">January 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8040">https://www.rfc-editor.org/rfc/rfc8040</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8341">[RFC8341]</dt>
+        <dd>
+<span class="refAuthor">Bierman, A.</span> and <span class="refAuthor">M. Bjorklund</span>, <span class="refTitle">"Network Configuration Access Control Model"</span>, <span class="seriesInfo">STD 91</span>, <span class="seriesInfo">RFC 8341</span>, <span class="seriesInfo">DOI 10.17487/RFC8341</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8341">https://www.rfc-editor.org/rfc/rfc8341</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8342">[RFC8342]</dt>
+        <dd>
+<span class="refAuthor">Bjorklund, M.</span>, <span class="refAuthor">Schoenwaelder, J.</span>, <span class="refAuthor">Shafer, P.</span>, <span class="refAuthor">Watsen, K.</span>, and <span class="refAuthor">R. Wilton</span>, <span class="refTitle">"Network Management Datastore Architecture (NMDA)"</span>, <span class="seriesInfo">RFC 8342</span>, <span class="seriesInfo">DOI 10.17487/RFC8342</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8342">https://www.rfc-editor.org/rfc/rfc8342</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8693">[RFC8693]</dt>
+        <dd>
+<span class="refAuthor">Jones, M.</span>, <span class="refAuthor">Nadalin, A.</span>, <span class="refAuthor">Campbell, B., Ed.</span>, <span class="refAuthor">Bradley, J.</span>, and <span class="refAuthor">C. Mortimore</span>, <span class="refTitle">"OAuth 2.0 Token Exchange"</span>, <span class="seriesInfo">RFC 8693</span>, <span class="seriesInfo">DOI 10.17487/RFC8693</span>, <time datetime="2020-01" class="refDate">January 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8693">https://www.rfc-editor.org/rfc/rfc8693</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9144">[RFC9144]</dt>
+        <dd>
+<span class="refAuthor">Clemm, A.</span>, <span class="refAuthor">Qu, Y.</span>, <span class="refAuthor">Tantsura, J.</span>, and <span class="refAuthor">A. Bierman</span>, <span class="refTitle">"Comparison of Network Management Datastore Architecture (NMDA) Datastores"</span>, <span class="seriesInfo">RFC 9144</span>, <span class="seriesInfo">DOI 10.17487/RFC9144</span>, <time datetime="2021-12" class="refDate">December 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9144">https://www.rfc-editor.org/rfc/rfc9144</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9396">[RFC9396]</dt>
+        <dd>
+<span class="refAuthor">Lodderstedt, T.</span>, <span class="refAuthor">Richer, J.</span>, and <span class="refAuthor">B. Campbell</span>, <span class="refTitle">"OAuth 2.0 Rich Authorization Requests"</span>, <span class="seriesInfo">RFC 9396</span>, <span class="seriesInfo">DOI 10.17487/RFC9396</span>, <time datetime="2023-05" class="refDate">May 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9396">https://www.rfc-editor.org/rfc/rfc9396</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9943">[RFC9943]</dt>
+        <dd>
+<span class="refAuthor">Birkholz, H.</span>, <span class="refAuthor">Delignat-Lavaud, A.</span>, <span class="refAuthor">Fournet, C.</span>, <span class="refAuthor">Deshpande, Y.</span>, and <span class="refAuthor">S. Lasker</span>, <span class="refTitle">"An Architecture for Trustworthy and Transparent Digital Supply Chains"</span>, <span class="seriesInfo">RFC 9943</span>, <span class="seriesInfo">DOI 10.17487/RFC9943</span>, <time datetime="2026-06" class="refDate">June 2026</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9943">https://www.rfc-editor.org/rfc/rfc9943</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TR23.801-01">[TR23.801-01]</dt>
+        <dd>
+<span class="refAuthor">3GPP</span>, <span class="refTitle">"Study on Architecture for 6G System; Stage 2 (Release 20)"</span>, <span class="seriesInfo">3GPP TR 23.801-01 V0.10.0</span>, <time datetime="2026-10" class="refDate">October 2026</time>, <span>&lt;<a href="https://www.3gpp.org/ftp/Specs/archive/23_series/23.801-01/">https://www.3gpp.org/ftp/Specs/archive/23_series/23.801-01/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TR32.801-01">[TR32.801-01]</dt>
+        <dd>
+<span class="refAuthor">3GPP</span>, <span class="refTitle">"Study on 6G Management and Orchestration (Release 20)"</span>, <span class="seriesInfo">3GPP TR 32.801-01 V0.5.0</span>, <time datetime="2026-10" class="refDate">October 2026</time>, <span>&lt;<a href="https://www.3gpp.org/ftp/Specs/archive/32_series/32.801-01/">https://www.3gpp.org/ftp/Specs/archive/32_series/32.801-01/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TR33.801-01">[TR33.801-01]</dt>
+        <dd>
+<span class="refAuthor">3GPP</span>, <span class="refTitle">"Study on Security for the 6G System (Release 20)"</span>, <span class="seriesInfo">3GPP TR 33.801-01 V0.7.0</span>, <time datetime="2026-10" class="refDate">October 2026</time>, <span>&lt;<a href="https://www.3gpp.org/ftp/Specs/archive/33_series/33.801-01/">https://www.3gpp.org/ftp/Specs/archive/33_series/33.801-01/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TS28.312">[TS28.312]</dt>
+        <dd>
+<span class="refAuthor">3GPP</span>, <span class="refTitle">"Management and orchestration; Intent driven management services for mobile networks (Release 20)"</span>, <span class="seriesInfo">3GPP TS 28.312 V20.1.0</span>, <time datetime="2026-09" class="refDate">September 2026</time>, <span>&lt;<a href="https://www.3gpp.org/ftp/Specs/archive/28_series/28.312/">https://www.3gpp.org/ftp/Specs/archive/28_series/28.312/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TS28.628">[TS28.628]</dt>
+        <dd>
+<span class="refAuthor">3GPP</span>, <span class="refTitle">"Telecommunication management; Self-Organizing Networks (SON) Policy Network Resource Model (NRM) Integration Reference Point (IRP); Information Service (IS) (Release 19)"</span>, <span class="seriesInfo">3GPP TS 28.628 V19.0.0</span>, <time datetime="2025-09" class="refDate">September 2025</time>, <span>&lt;<a href="https://www.3gpp.org/ftp/Specs/archive/28_series/28.628/">https://www.3gpp.org/ftp/Specs/archive/28_series/28.628/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="TS33.501">[TS33.501]</dt>
+      <dd>
+<span class="refAuthor">3GPP</span>, <span class="refTitle">"Security architecture and procedures for 5G system (Release 20)"</span>, <span class="seriesInfo">3GPP TS 33.501 V20.3.0</span>, <time datetime="2026-09" class="refDate">September 2026</time>, <span>&lt;<a href="https://www.3gpp.org/ftp/Specs/archive/33_series/33.501/">https://www.3gpp.org/ftp/Specs/archive/33_series/33.501/</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
 </section>
 </div>
 <div id="acknowledgments">
