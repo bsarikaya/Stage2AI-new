@@ -98,6 +98,54 @@ informative:
       3GPP TS: 28.628 V19.0.0
     date: 2025-09
     target: https://www.3gpp.org/ftp/Specs/archive/28_series/28.628/
+  S2-2613128:
+    title: "[KI#18, Conclusion] Interim conclusion for KI#18, Bullet #1"
+    author:
+      org: Huawei et al.
+    seriesinfo:
+      3GPP SA WG2 Tdoc: S2-2613128
+    date: 2026-11
+    target: https://www.3gpp.org/ftp/tsg_sa/WG2_Arch/TSGS2_178_Calgary_2026-11/Docs/S2-2613128.zip
+  S2-2613092:
+    title: "[KI#18, Interim conclusions] Bullet 2: Enabling closed-loop operations and learning techniques"
+    author:
+      org: Lenovo et al.
+    seriesinfo:
+      3GPP SA WG2 Tdoc: S2-2613092
+    date: 2026-11
+    target: https://www.3gpp.org/ftp/tsg_sa/WG2_Arch/TSGS2_178_Calgary_2026-11/Docs/S2-2613092.zip
+  S2-2613041:
+    title: "[KI#18, Conclusion] Interim conclusions for #18.22 (controllability)"
+    author:
+      org: Samsung et al.
+    seriesinfo:
+      3GPP SA WG2 Tdoc: S2-2613041
+    date: 2026-11
+    target: https://www.3gpp.org/ftp/tsg_sa/WG2_Arch/TSGS2_178_Calgary_2026-11/Docs/S2-2613041.zip
+  S2-2612866:
+    title: "[KI#19, update of clause 7.1.19] Interim agreement for KI#19 bullet 1&2"
+    author:
+      org: China Mobile et al.
+    seriesinfo:
+      3GPP SA WG2 Tdoc: S2-2612866
+    date: 2026-11
+    target: https://www.3gpp.org/ftp/tsg_sa/WG2_Arch/TSGS2_178_Calgary_2026-11/Docs/S2-2612866.zip
+  S2-2613121:
+    title: "LS on clarification on UE AI Agents"
+    author:
+      org: 3GPP SA WG2
+    seriesinfo:
+      3GPP SA WG2 Tdoc: S2-2613121
+    date: 2026-11
+    target: https://www.3gpp.org/ftp/tsg_sa/WG2_Arch/TSGS2_178_Calgary_2026-11/Docs/S2-2613121.zip
+  S2-2613124:
+    title: "Reply LS on Guidance on 6G System architecture"
+    author:
+      org: 3GPP SA WG2
+    seriesinfo:
+      3GPP SA WG2 Tdoc: S2-2613124
+    date: 2026-11
+    target: https://www.3gpp.org/ftp/tsg_sa/WG2_Arch/TSGS2_178_Calgary_2026-11/Docs/S2-2613124.zip
   RFC6241:
   RFC6470:
   RFC8040:
@@ -144,9 +192,11 @@ The solution variants (SVs) for Key Issue (KI) #18 in {{TR23.801-01}} let an AI 
 
 ## Status in 3GPP and Approach {#safe-status}
 
-At the time of writing, the only interim agreement on operator control under KI#18 is clause 7.1.18.1 of {{TR23.801-01}}. It states that the 6G core network supports authorising or controlling the sending of intent requests per requested service or per User Equipment (UE) or Application Function (AF), and supports activating and deactivating AI capabilities per NF. Whether and how the operator controls AI observability and traceability is for further study, and the details of control through operations, administration and maintenance (OAM) are left to 3GPP SA WG5. Everything else cited below from clause 6.18 is a proposal in an SV, not an agreement. Agreed text for KI#19 (clauses 7.1.19.1 and 7.1.19.2) is cited where it is relevant and is marked as KI#19.
+In {{TR23.801-01}}, which is the latest published version, the only interim agreement on operator control under KI#18 is clause 7.1.18.1. It states that the 6G core network supports authorising or controlling the sending of intent requests per requested service or per User Equipment (UE) or Application Function (AF), and supports activating and deactivating AI capabilities per NF. Whether and how the operator controls AI observability and traceability is for further study, and the details of control through operations, administration and maintenance (OAM) are left to 3GPP SA WG5. Everything else cited below from clause 6.18 is a proposal in an SV, not an agreement. Agreed text for KI#19 (clauses 7.1.19.1 and 7.1.19.2) is cited where it is relevant and is marked as KI#19.
 
-The choice between NW-Agent functions and an ISF (clause 6.18.1), intent handling embedded in existing NFs, with or without AI (clause 6.18.2), and a separate AI domain (clause 6.18.3) is also open. This section therefore uses three role names that do not depend on that choice:
+SA WG2 meeting #178 (November 2026) approved further interim conclusions for KI#18. They are not yet in a published version of the TR and are cited here by document number. The general principles {{S2-2613128}} state that AI capabilities and technologies are optional and subject to operator policies and configuration, that the 6G core network can receive 3GPP intents only from UEs and AFs, and that intent fulfilment should comply with network policies, subscription constraints, and the available network capabilities and resources. The clause that contains the last of these is marked as depending on an agreement on the intent structure, and the proposed conclusions on the intent structure were postponed. The principles for closed-loop operation {{S2-2613092}} make it optional and assign closed-loop governance to the entity that is responsible for intent handling; which entity that is depends on the architecture option and is for further study. The proposed conclusions on operator control {{S2-2613041}}, which build on SV#18.22, were postponed. Their text includes that the core network can verify whether a fulfilment decision adheres to the policies and constraints configured by the operator, and that the core network may support several autonomy levels. The proposed conclusions on tool invocation and on performance monitoring were postponed as well.
+
+The choice between NW-Agent functions and an ISF (clause 6.18.1), intent handling embedded in existing NFs, with or without AI (clause 6.18.2), and a separate AI domain (clause 6.18.3) is also open. After meeting #178, SA WG2 reported to TSG SA that it has not reached consensus on the overall 6G system architecture, and that whether to define one or more dedicated NFs for intent handling and fulfilment is one of the outstanding issues {{S2-2613124}}. This section therefore uses three role names that do not depend on that choice:
 
 agent:
 : The entity that plans and invokes actions to fulfil an intent, for example the NW-Agent functions or the intent fulfilment logic of the ISF. The term names a role. An NW-Agent function can play it, but the two terms are not the same.
@@ -167,7 +217,7 @@ The requirements are numbered for discussion. The key words in them describe wha
 
 In the 5G service-based architecture, access to NF services is authorised with OAuth 2.0 access tokens issued by the Network Repository Function (NRF) (clause 13.4.1 of {{TS33.501}}). A token names the consumer NF instance, the producer NF type or producer NF instances, the services, optionally the operations and resources, optionally a list of slices or NF sets, and an expiry time. The claims defined in that clause do not include the task or intent being served, the UEs or parameter values affected, or the size of a change. Annex X of {{TS33.501}} adds a claim that names the source NF when an intermediary NF acts on its behalf, but only for the network automation services of that annex, such as access to data, analytics and AI/ML models. Token revocation is not supported.
 
-For agents, SV#18.22 proposes a boundary of allowed NFs, NF services, slices, UEs and services that OAM configures statically (clause 6.18.22.1.1.1 of {{TR23.801-01}}), and autonomy levels that can be raised or lowered (clause 6.18.22.0). Neither the boundary nor the autonomy levels are agreed, and the SV itself notes that configuration through OAM cannot guarantee control in real time. The agreed UE AI agent identifier (KI#19, clause 7.1.19.1) applies to operator-controlled agents on UEs. No agreed text defines an identifier or a credential for an agent in the network. Some SVs propose that agents register with an agent identifier (for example clause 6.18.17.0), but they do not say how it is authenticated or tied to authority. {{TR33.801-01}} has no key issue dedicated to KI#18. Its key issue on agentic exposure (clause 5.6.3.3) covers the exposure aspects of KI#18 and KI#19, and in its clause on UE AI agent security (clause 5.8.1) the aspects related to KI#18 are marked for further study.
+For agents, SV#18.22 proposes a boundary of allowed NFs, NF services, slices, UEs and services that OAM configures statically (clause 6.18.22.1.1.1 of {{TR23.801-01}}), and autonomy levels that can be raised or lowered (clause 6.18.22.0). Neither the boundary nor the autonomy levels are agreed, and the SV itself notes that configuration through OAM cannot guarantee control in real time. The agreed UE AI agent identifier (KI#19, clause 7.1.19.1) applies to operator-controlled agents on UEs. An update approved at SA WG2 meeting #178 {{S2-2612866}} relates the identifier to the UE subscription, has the home network allocate it, supports one agent per UE in this release, and authorises the agent on the basis of the subscription data and the identifier. The identifier is configured in the UE by means outside the scope of 3GPP, and SA WG2 has asked SA WG3 for feedback on the assumption that the operator trusts these means {{S2-2613121}}. No agreed text defines an identifier or a credential for an agent in the network. Some SVs propose that agents register with an agent identifier (for example clause 6.18.17.0), but they do not say how it is authenticated or tied to authority. {{TR33.801-01}} has no key issue dedicated to KI#18. Its key issue on agentic exposure (clause 5.6.3.3) covers the exposure aspects of KI#18 and KI#19, and in its clause on UE AI agent security (clause 5.8.1) the aspects related to KI#18 are marked for further study.
 
 The agreed controls decide who may send an intent and whether an NF may use AI. They do not state what a particular agent may change while it fulfils a particular intent.
 
@@ -193,7 +243,7 @@ Several related IETF specifications exist. {{I-D.ietf-wimse-aims}} gives each ag
 
 ## Pre-Action Verification {#safe-verification}
 
-SV#18.22 proposes that operator control may evaluate selected AI-derived candidate actions, namely those that change network state or service behaviour that is visible from outside, before they are enforced, where operator policy so provides. The evaluation has five possible dispositions: it can allow the action, allow it within a narrower scope, ask for more explanation or context, redirect it to a defined or default procedure, or deny it (clause 6.18.22.0 of {{TR23.801-01}}). A note adds that the evaluation of an explanation does not authorise an action that is prohibited on other grounds, such as operator policy or security requirements. SV#18.1 describes an intermediary under operator control that verifies intents, plans and candidate actions before enforcement (clause 6.18.1.1.1.1). SV#18.6 has an optional step in which, if digital twin simulation is supported and enabled by operator policy, the executing function may invoke the digital twin for validation before the live invocation (clause 6.18.6.2.5); the text does not say what is validated or how the result is used. None of this is agreed. In the ISF option, the gateway function is listed both with translating invocation requests into service requests and with authorising, auditing and verifying intent actions; whether it is deployed separately is for further study (clause 6.18.1.1.1.2). The intermediary of SV#18.1 may likewise be co-located with the NW-Agent function. If the gateway function or the intermediary is also part of the agent, it cannot satisfy VER-1 by itself.
+SV#18.22 proposes that operator control may evaluate selected AI-derived candidate actions, namely those that change network state or service behaviour that is visible from outside, before they are enforced, where operator policy so provides. The evaluation has five possible dispositions: it can allow the action, allow it within a narrower scope, ask for more explanation or context, redirect it to a defined or default procedure, or deny it (clause 6.18.22.0 of {{TR23.801-01}}). A note adds that the evaluation of an explanation does not authorise an action that is prohibited on other grounds, such as operator policy or security requirements. SV#18.1 describes an intermediary under operator control that verifies intents, plans and candidate actions before enforcement (clause 6.18.1.1.1.1). SV#18.6 has an optional step in which, if digital twin simulation is supported and enabled by operator policy, the executing function may invoke the digital twin for validation before the live invocation (clause 6.18.6.2.5); the text does not say what is validated or how the result is used. None of this is agreed. The general principles approved at SA WG2 meeting #178 say that intent fulfilment should comply with network policies and subscription constraints {{S2-2613128}}, but not which entity checks this or when. The proposed text on verifying a fulfilment decision against operator policy was postponed ({{safe-status}}). In the ISF option, the gateway function is listed both with translating invocation requests into service requests and with authorising, auditing and verifying intent actions; whether it is deployed separately is for further study (clause 6.18.1.1.1.2). The intermediary of SV#18.1 may likewise be co-located with the NW-Agent function. If the gateway function or the intermediary is also part of the agent, it cannot satisfy VER-1 by itself.
 
 Two precedents exist on the management side. In coordination of self-organising network (SON) functions (clause 4.7.4.2 of {{TS28.628}}), a SON function can request permission from a coordination function before it changes certain parameters. The coordination function typically bases its answer on inputs such as the current and the proposed values and the likely impact on other objects and on performance indicators. Intent-driven management (clause 5.3.3 of {{TS28.312}}) has a feasibility check of an intent before fulfilment, which can use network digital twin functions to simulate the resulting management tasks. It does not define a check that is applied to each configuration change made while the intent is fulfilled.
 
@@ -226,7 +276,7 @@ The IETF and the IRTF have parts of this for configuration management. RESTCONF 
 
 ## Rollback and Containment {#safe-rollback}
 
-SV#18.22 proposes, for some of the architecture options, that the network can always switch to default procedures that do not use AI, in a forced or a graceful way, that default handling may include a return to a previously known safe state, and that an intermediary can stop forwarding tool invocations from agents (clauses 6.18.22.0 and 6.18.22.1.1.2.3 of {{TR23.801-01}}). Whether both forced and graceful switching are needed, and how service continuity is kept during the switch, are open. SV#18.15 has a participating NF stop or revert an exploratory action of reinforcement learning when a safeguard in the exploration policy is breached (clause 6.18.15.2.1.2). For KI#18, the agreed text provides only activation and deactivation of AI capabilities per NF (clause 7.1.18.1). There is no agreed text on stopping an agent or on undoing its changes. For KI#19, the network and the consumer can terminate an AI training or inference service (clause 7.1.19.2), which is termination of a service and not the reversal of actions on NFs.
+SV#18.22 proposes, for some of the architecture options, that the network can always switch to default procedures that do not use AI, in a forced or a graceful way, that default handling may include a return to a previously known safe state, and that an intermediary can stop forwarding tool invocations from agents (clauses 6.18.22.0 and 6.18.22.1.1.2.3 of {{TR23.801-01}}). Whether both forced and graceful switching are needed, and how service continuity is kept during the switch, are open. SV#18.15 has a participating NF stop or revert an exploratory action of reinforcement learning when a safeguard in the exploration policy is breached (clause 6.18.15.2.1.2). For KI#18, the agreed text in {{TR23.801-01}} provides only activation and deactivation of AI capabilities per NF (clause 7.1.18.1). There is no agreed text on stopping an agent or on undoing its changes. Where closed-loop operation is used, the principles approved at SA WG2 meeting #178 {{S2-2613092}} have an entity that supports intent fulfilment determine the status of fulfilment from performance monitoring and adjust its fulfilment plan when needed. The text does not say whether adjusting the plan includes undoing steps that were already applied, or whether it can be done without the entity that acted. For KI#19, the network and the consumer can terminate an AI training or inference service (clause 7.1.19.2), which is termination of a service and not the reversal of actions on NFs.
 
 Switching AI off for future requests is different from undoing what an agent has already done. A plan that fulfils one intent can change several NFs. SV#18.22 mentions a return to the last known configuration of an NF, but if a plan fails or is stopped halfway, the SVs do not say how the completed steps of a plan that spans several NFs are identified and reversed.
 
@@ -285,15 +335,29 @@ NETCONF configuration change notifications {{RFC6470}} are produced by the serve
 
 | Topic | Agreed in 3GPP | Proposed, not agreed | Open |
 |---|---|---|---|
-| Scope of authority | Intent sending per service or per UE/AF; AI on or off per NF | Static boundary and autonomy levels (SV#18.22) | Grant per agent and task; revocation; delegation |
-| Pre-action verification | Nothing | Evaluation with five dispositions (SV#18.22); intermediary under operator control (SV#18.1); digital twin step (SV#18.6) | State on which the check relies; independence from the agent |
-| Rollback and containment | AI on or off per NF; nothing on rollback or on stopping an agent | Switch to default procedures and stop forwarding (SV#18.22); revert of exploratory actions (SV#18.15) | Rollback of a plan that spans several NFs; revert triggers; sessions |
+| Scope of authority | Intent sending per service or per UE/AF; AI on or off per NF; AI optional and subject to operator policy (meeting #178) | Static boundary and autonomy levels (SV#18.22) | Grant per agent and task; revocation; delegation |
+| Pre-action verification | Intent fulfilment should comply with network policy (meeting #178); nothing on a check | Evaluation with five dispositions (SV#18.22); intermediary under operator control (SV#18.1); digital twin step (SV#18.6); verification of the fulfilment decision against operator policy (postponed at meeting #178) | State on which the check relies; independence from the agent |
+| Rollback and containment | AI on or off per NF; adjustment of the fulfilment plan in an optional closed loop (meeting #178); nothing on rollback or on stopping an agent | Switch to default procedures and stop forwarding (SV#18.22); revert of exploratory actions (SV#18.15) | Rollback of a plan that spans several NFs; revert triggers; sessions |
 | Attribution | Nothing; control of observability and traceability is for further study | Correlation identifier and traceability information (SV#18.6); local decision records (SV#18.22); audit and monitoring functions (SV#18.1, SV#18.19) | Independent, protected records; agent identity and grant carried in the record of a change |
-{: #safe-summary-table title="Status of the four topics for KI#18 in TR 23.801-01 V0.10.0"}
+{: #safe-summary-table title="Status of the four topics for KI#18 in TR 23.801-01 V0.10.0 and after SA WG2 meeting #178"}
 
 # Security Considerations {#security}
 
-TODO Security
+This document does not define a protocol. The considerations below concern the entities and the information that {{safe-operation}} relies on, each of which becomes something to attack once it exists.
+
+An agent that can change NFs is a privileged entity in the core network. Its input comes from outside its control: intents from UEs and AFs, data read from NFs, and the results of tool invocations. Whoever can shape that input may be able to steer the agent, and the agent cannot be relied on to detect this. The requirements in {{safe-authority}} and {{safe-verification}} therefore do not depend on the agent behaving correctly: the grant limits what a steered agent can do (AUTH-2, AUTH-6), and the check does not rest only on information that the agent supplies (VER-1). Two values still come from the agent: the version of the state in VER-2 and the expected effect in VER-6. The enforcement point has to compare the first with the target, and operator policy has to bound the second, because an expected effect that is trivially met weakens the automatic reversion of RBK-3 and leaves only the health conditions set by the operator.
+
+A grant is a credential. If another party can copy and use it, or if it can be reused for another task, the limits it expresses are lost. Grants therefore need to be bound to the agent that holds them and to be protected in transit, in addition to being short-lived (AUTH-3) and revocable (AUTH-4). {{safe-authority}} does not yet contain a requirement for this. Delegation adds the risk that an agent with little authority gets an agent with more authority to act for it. AUTH-5 addresses this only if the receiving agent acts under the derived grant and not under its own.
+
+The other requirements depend on the enforcement point, so its compromise defeats them. It has to be separate from the agent ({{safe-verification}}), and access to its policy and configuration deserves at least the protection given to the targets. When the enforcement point cannot be reached, the actions of agents can be refused, deferred or applied unchecked. Refusing or deferring them is the safer default for security, at a cost in availability, which is one reason why the ability to fall back to procedures that do not use AI, proposed in SV#18.22, matters for security as well as for operations.
+
+The functions for stopping an agent and for reverting a plan (RBK-2, RBK-4) are powerful in their own right. A party that can invoke them without authority can undo legitimate changes or disable automation across the network. They need authentication and authorisation that do not depend on the agent, and their use needs to be recorded in the same way as changes made for an agent ({{safe-attribution}}). Automatic reversion (RBK-3) depends on measurements. A party that can falsify or suppress those measurements can cause changes to be reverted, or can keep a harmful change in place.
+
+Records of changes contain configuration values, the identities of NFs and possibly information about subscribers. ATT-6 limits what the identifiers reveal, and ATT-7 lets the operator set who can read the records. An investigation after an incident relies on the same records, so a compromised agent has a reason to alter them. This is why the agent's own record is not sufficient evidence (ATT-2) and why alteration has to be detectable (ATT-4). The time source of ATT-5 needs protection for the same reason: with a wrong time, a change can no longer be related to its effect.
+
+The key issues on AI agents in the 3GPP security study so far concern requests that enter the network from AFs and UEs. {{TR33.801-01}} has key issues on agentic exposure from the core network (clause 5.6.3.3), on intent-based exposure (clause 5.6.3.4) and on the authorisation of UE AI agents (clause 5.8.3.2). The threats they list include an agent obtaining permissions beyond its authorised scope, and one potential requirement is that authorisation information can be updated and revoked throughout the life cycle of a UE AI agent. The authors are not aware of a key issue in that study on what an agent inside the network is allowed to change. In its security area on UE AI agents, the aspects related to KI#18 are for further study (clause 5.8.1).
+
+The IETF mechanisms cited in {{safe-operation}} have their own security considerations, which apply when those mechanisms are used.
 
 
 # IANA Considerations {#iana}
