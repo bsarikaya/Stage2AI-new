@@ -177,12 +177,17 @@ TODO Abstract
 
 TODO Introduction
 
-Intents are what is new to 3GPP in 6G. Intent Serving Function (ISF) is defined to handle intents. We explain the intent processing in 6G.
+While 5G-Advanced treats intent as a formalized management service {{TS28.312]] to automate existing network operations, 6G reimagines intent as a primary interaction mechanism for both internal AI agents and external third-party applications.
+So for 6G, intent is primarily as a foundational mechanism for autonomous network management, AI-driven orchestration, and third-party service exposure. Rather than treating intent solely as an isolated network management tool, the study embeds intent-driven operations directly into the AI-native and service-centric 6G architecture. 
+
 # Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
 
-# NW-Agent and Intent Serving Function
+VENKAT Attn Please: do not use SV#, KI# (SV's will disappear after the 3GPP document is finalized like TR 22.870, KI numbering is not relevant for IETF)
+# AI for 6G Architecture
+
+NW-Agent and Intent Serving Function
 
 Intents are declative service requests coming UE or other Application Functions (AF). Execution of intents takes several steps.
 
@@ -328,6 +333,9 @@ ATT-7:
 : The operator MUST be able to set the retention period of records and the rules for access to them.
 
 NETCONF configuration change notifications {{RFC6470}} are produced by the server. They identify either the server itself or the user name, session and source host of the management session that made a change, but they have no field for the party on whose behalf it was made. Trace context propagation for NETCONF {{I-D.ietf-netconf-trace-ctx-extension}} lets a client attach a W3C trace context to a request, and lets the server add a trace context to the reply and to notifications. It correlates records; it does not authenticate the party that set the value. YANG data provenance {{I-D.ietf-opsawg-yang-provenance}} lets the producer of YANG data sign it, and later parties can add countersignatures. The signatures cover the origin and integrity of the data; nothing in them says who asked for the change. The SCITT architecture {{RFC9943}} provides append-only logs of signed statements with receipts, which could serve ATT-4. The architecture in {{I-D.kuehlewind-audit-architecture}}, written for the proposed AUDIT work in the IETF, has the services record what they observe at their own boundary. It states that an agent that records itself cannot by itself deliver non-repudiation to a third party, which is consistent with ATT-2. {{I-D.ietf-wimse-aims}} lists the minimum content of an audit event for authorisation decisions and requires audit records to be tamper-evident. {{I-D.mcw-opsawg-icon-requirements}} has requirements on accountability, tamper-evident telemetry and an authoritative clock source.
+
+# 6G Network for AI
+
 
 ## Summary {#safe-summary}
 
