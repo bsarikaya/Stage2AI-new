@@ -1172,15 +1172,13 @@ svg {
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.5">
                 <p id="section-toc.1-1.3.2.5.1"><a href="#section-3.5" class="auto internal xref">3.5</a>.  <a href="#name-attribution" class="internal xref">Attribution</a></p>
 </li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.6">
+                <p id="section-toc.1-1.3.2.6.1"><a href="#section-3.6" class="auto internal xref">3.6</a>.  <a href="#name-summary" class="internal xref">Summary</a></p>
+</li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-6g-network-for-ai" class="internal xref">6G Network for AI</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
-                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-summary" class="internal xref">Summary</a></p>
-</li>
-            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
@@ -1451,19 +1449,12 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <p id="section-3.5-4">NETCONF configuration change notifications <span>[<a href="#RFC6470" class="cite xref">RFC6470</a>]</span> are produced by the server. They identify either the server itself or the user name, session and source host of the management session that made a change, but they have no field for the party on whose behalf it was made. Trace context propagation for NETCONF <span>[<a href="#I-D.ietf-netconf-trace-ctx-extension" class="cite xref">I-D.ietf-netconf-trace-ctx-extension</a>]</span> lets a client attach a W3C trace context to a request, and lets the server add a trace context to the reply and to notifications. It correlates records; it does not authenticate the party that set the value. YANG data provenance <span>[<a href="#I-D.ietf-opsawg-yang-provenance" class="cite xref">I-D.ietf-opsawg-yang-provenance</a>]</span> lets the producer of YANG data sign it, and later parties can add countersignatures. The signatures cover the origin and integrity of the data; nothing in them says who asked for the change. The SCITT architecture <span>[<a href="#RFC9943" class="cite xref">RFC9943</a>]</span> provides append-only logs of signed statements with receipts, which could serve ATT-4. The architecture in <span>[<a href="#I-D.kuehlewind-audit-architecture" class="cite xref">I-D.kuehlewind-audit-architecture</a>]</span>, written for the proposed AUDIT work in the IETF, has the services record what they observe at their own boundary. It states that an agent that records itself cannot by itself deliver non-repudiation to a third party, which is consistent with ATT-2. <span>[<a href="#I-D.ietf-wimse-aims" class="cite xref">I-D.ietf-wimse-aims</a>]</span> lists the minimum content of an audit event for authorisation decisions and requires audit records to be tamper-evident. <span>[<a href="#I-D.mcw-opsawg-icon-requirements" class="cite xref">I-D.mcw-opsawg-icon-requirements</a>]</span> has requirements on accountability, tamper-evident telemetry and an authoritative clock source.<a href="#section-3.5-4" class="pilcrow">¶</a></p>
 </section>
 </div>
-</section>
-</div>
-<div id="g-network-for-ai">
-<section id="section-4">
-      <h2 id="name-6g-network-for-ai">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-6g-network-for-ai" class="section-name selfRef">6G Network for AI</a>
-      </h2>
 <div id="safe-summary">
-<section id="section-4.1">
+<section id="section-3.6">
         <h3 id="name-summary">
-<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-summary" class="section-name selfRef">Summary</a>
+<a href="#section-3.6" class="section-number selfRef">3.6. </a><a href="#name-summary" class="section-name selfRef">Summary</a>
         </h3>
-<p id="section-4.1-1"><a href="#safe-summary-table" class="auto internal xref">Table 1</a> summarises the status of the four topics. This document does not ask 3GPP to adopt any of the requirements. They are offered as input for discussion.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.6-1"><a href="#safe-summary-table" class="auto internal xref">Table 1</a> summarises the status of the four topics. This document does not ask 3GPP to adopt any of the requirements. They are offered as input for discussion.<a href="#section-3.6-1" class="pilcrow">¶</a></p>
 <span id="name-status-of-the-four-topics-f"></span><div id="safe-summary-table">
 <table class="center" id="table-1">
           <caption>
@@ -1508,6 +1499,13 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </div>
 </section>
 </div>
+</section>
+</div>
+<div id="g-network-for-ai">
+<section id="section-4">
+      <h2 id="name-6g-network-for-ai">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-6g-network-for-ai" class="section-name selfRef">6G Network for AI</a>
+    </h2>
 </section>
 </div>
 <div id="security">

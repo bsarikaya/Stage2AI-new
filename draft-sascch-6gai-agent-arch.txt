@@ -70,8 +70,8 @@ Table of Contents
      3.3.  Pre-Action Verification
      3.4.  Rollback and Containment
      3.5.  Attribution
+     3.6.  Summary
    4.  6G Network for AI
-     4.1.  Summary
    5.  Security Considerations
    6.  IANA Considerations
    7.  References
@@ -576,9 +576,7 @@ Table of Contents
    requirements on accountability, tamper-evident telemetry and an
    authoritative clock source.
 
-4.  6G Network for AI
-
-4.1.  Summary
+3.6.  Summary
 
    Table 1 summarises the status of the four topics.  This document does
    not ask 3GPP to adopt any of the requirements.  They are offered as
@@ -648,6 +646,8 @@ Table of Contents
        Table 1: Status of the four topics for the key issue AI for 6G
        architecture, in TR 23.801-01 V0.10.0 and after SA WG2 meeting
                    #178; clause numbers refer to that TR
+
+4.  6G Network for AI
 
 5.  Security Considerations
 
