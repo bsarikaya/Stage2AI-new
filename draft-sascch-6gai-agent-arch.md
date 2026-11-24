@@ -334,9 +334,6 @@ ATT-7:
 
 NETCONF configuration change notifications {{RFC6470}} are produced by the server. They identify either the server itself or the user name, session and source host of the management session that made a change, but they have no field for the party on whose behalf it was made. Trace context propagation for NETCONF {{I-D.ietf-netconf-trace-ctx-extension}} lets a client attach a W3C trace context to a request, and lets the server add a trace context to the reply and to notifications. It correlates records; it does not authenticate the party that set the value. YANG data provenance {{I-D.ietf-opsawg-yang-provenance}} lets the producer of YANG data sign it, and later parties can add countersignatures. The signatures cover the origin and integrity of the data; nothing in them says who asked for the change. The SCITT architecture {{RFC9943}} provides append-only logs of signed statements with receipts, which could serve ATT-4. The architecture in {{I-D.kuehlewind-audit-architecture}}, written for the proposed AUDIT work in the IETF, has the services record what they observe at their own boundary. It states that an agent that records itself cannot by itself deliver non-repudiation to a third party, which is consistent with ATT-2. {{I-D.ietf-wimse-aims}} lists the minimum content of an audit event for authorisation decisions and requires audit records to be tamper-evident. {{I-D.mcw-opsawg-icon-requirements}} has requirements on accountability, tamper-evident telemetry and an authoritative clock source.
 
-# 6G Network for AI
-
-
 ## Summary {#safe-summary}
 
 {{safe-summary-table}} summarises the status of the four topics. This document does not ask 3GPP to adopt any of the requirements. They are offered as input for discussion.
@@ -348,6 +345,9 @@ NETCONF configuration change notifications {{RFC6470}} are produced by the serve
 | Rollback and containment | AI on or off per NF; adjustment of the fulfilment plan in an optional closed loop (meeting #178); nothing on rollback or on stopping an agent | Switch to default procedures and stop forwarding (clause 6.18.22); revert of exploratory actions (clause 6.18.15) | Rollback of a plan that spans several NFs; revert triggers; sessions |
 | Attribution | Nothing; control of observability and traceability is for further study | Correlation identifier and traceability information (clause 6.18.6); local decision records (clause 6.18.22); audit and monitoring functions (clauses 6.18.1 and 6.18.19) | Independent, protected records; agent identity and grant carried in the record of a change |
 {: #safe-summary-table title="Status of the four topics for the key issue AI for 6G architecture, in TR 23.801-01 V0.10.0 and after SA WG2 meeting #178; clause numbers refer to that TR"}
+
+# 6G Network for AI
+
 
 # Security Considerations {#security}
 
