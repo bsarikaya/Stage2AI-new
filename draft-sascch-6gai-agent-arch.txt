@@ -5,9 +5,9 @@
 Network Working Group                                        B. Sarikaya
 Internet-Draft                                              Unaffiliated
 Intended status: Informational                                 R. Schott
-Expires: 28 May 2027                                    Deutsche Telekom
+Expires: 31 May 2027                                    Deutsche Telekom
                                                               V. Chintha
-                                                        24 November 2026
+                                                        27 November 2026
 
 
                   AI Architecture in 6G Mobile Network
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 May 2027.
+   This Internet-Draft will expire on 31 May 2027.
 
 Copyright Notice
 
@@ -64,19 +64,20 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Operating AI Agents Safely
-     3.1.  Status in 3GPP and Approach
-     3.2.  Scope of Authority
-     3.3.  Pre-Action Verification
-     3.4.  Rollback and Containment
-     3.5.  Attribution
-     3.6.  Summary
-   4.  6G Network for AI
-   5.  Security Considerations
-   6.  IANA Considerations
-   7.  References
-     7.1.  Normative References
-     7.2.  Informative References
+   3.  AI for 6G Architecture
+   4.  Operating AI Agents Safely
+     4.1.  Status in 3GPP and Approach
+     4.2.  Scope of Authority
+     4.3.  Pre-Action Verification
+     4.4.  Rollback and Containment
+     4.5.  Attribution
+     4.6.  Summary
+   5.  6G Network for AI
+   6.  Security Considerations
+   7.  IANA Considerations
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -85,7 +86,7 @@ Table of Contents
    TODO Introduction
 
    While 5G-Advanced treats intent as a formalized management service
-   {{TS28.312]] to automate existing network operations, 6G reimagines
+   [TS28.312] to automate existing network operations, 6G reimagines
    intent as a primary interaction mechanism for both internal AI agents
    and external third-party applications.  So for 6G, intent is
    primarily as a foundational mechanism for autonomous network
@@ -104,14 +105,16 @@ Table of Contents
 
    VENKAT Attn Please: do not use SV#, KI# (SV's will disappear after
    the 3GPP document is finalized like TR 22.870, KI numbering is not
-   relevant for IETF) # AI for 6G Architecture
+   relevant for IETF)
+
+3.  AI for 6G Architecture
 
    NW-Agent and Intent Serving Function
 
    Intents are declative service requests coming UE or other Application
    Functions (AF).  Execution of intents takes several steps.
 
-3.  Operating AI Agents Safely
+4.  Operating AI Agents Safely
 
    The solutions proposed in [TR23.801-01] under its key issue "AI for
    6G architecture" (clause 5.18) let an AI agent turn an intent into
@@ -122,7 +125,7 @@ Table of Contents
    what.  For each of the four, it describes where 3GPP stands, what is
    still open, and which IETF work can be reused.
 
-3.1.  Status in 3GPP and Approach
+4.1.  Status in 3GPP and Approach
 
    In [TR23.801-01], which is the latest published version, the only
    interim agreement on operator control under the key issue "AI for 6G
@@ -211,7 +214,7 @@ Table of Contents
    from 3GPP procedures, IETF protocols or both.  They do not place
    conformance obligations on implementations of this document.
 
-3.2.  Scope of Authority
+4.2.  Scope of Authority
 
    In the 5G service-based architecture, access to NF services is
    authorised with OAuth 2.0 access tokens issued by the Network
@@ -305,7 +308,7 @@ Table of Contents
    authorisation.  It does not require a grant that is tied to a task,
    that expires, or that cannot be widened on delegation.
 
-3.3.  Pre-Action Verification
+4.3.  Pre-Action Verification
 
    Under the operator control proposal, operator control may evaluate
    selected AI-derived candidate actions, namely those that change
@@ -329,7 +332,7 @@ Table of Contents
    fulfilment should comply with network policies and subscription
    constraints [S2-2613128], but not which entity checks this or when.
    The proposed text on verifying a fulfilment decision against operator
-   policy was postponed (Section 3.1).  In the ISF option, the gateway
+   policy was postponed (Section 4.1).  In the ISF option, the gateway
    function is listed both with translating invocation requests into
    service requests and with authorising, auditing and verifying intent
    actions; whether it is deployed separately is for further study
@@ -410,7 +413,7 @@ Table of Contents
    configuration against its data model is not a check of its effect on
    the network.
 
-3.4.  Rollback and Containment
+4.4.  Rollback and Containment
 
    The operator control proposal says, for some of the architecture
    options, that the network can always switch to default procedures
@@ -487,7 +490,7 @@ Table of Contents
    distinction between accepted and applied, and on rollback.  It does
    not define an identifier, a protocol or a mapping to 3GPP entities.
 
-3.5.  Attribution
+4.5.  Attribution
 
    The intent fulfilment proposal has a correlation identifier for each
    intent being fulfilled.  It is associated with the fulfilment plan
@@ -510,7 +513,7 @@ Table of Contents
    observability of management agents (clause 9.3.1.4.2.1 of
    [TR32.801-01]) has the management agent report its own operation log,
    including who invoked the operation, to a consumer that subscribed to
-   it.  As noted in Section 3.1, operator control of observability and
+   it.  As noted in Section 4.1, operator control of observability and
    traceability is not yet agreed.
 
    Several of these proposals have the entity that acted record its own
@@ -576,7 +579,7 @@ Table of Contents
    requirements on accountability, tamper-evident telemetry and an
    authoritative clock source.
 
-3.6.  Summary
+4.6.  Summary
 
    Table 1 summarises the status of the four topics.  This document does
    not ask 3GPP to adopt any of the requirements.  They are offered as
@@ -647,12 +650,12 @@ Table of Contents
        architecture, in TR 23.801-01 V0.10.0 and after SA WG2 meeting
                    #178; clause numbers refer to that TR
 
-4.  6G Network for AI
+5.  6G Network for AI
 
-5.  Security Considerations
+6.  Security Considerations
 
    This document does not define a protocol.  The considerations below
-   concern the entities and the information that Section 3 relies on,
+   concern the entities and the information that Section 4 relies on,
    each of which becomes something to attack once it exists.
 
    An agent that can change NFs is a privileged entity in the core
@@ -660,7 +663,7 @@ Table of Contents
    and AFs, data read from NFs, and the results of tool invocations.
    Whoever can shape that input may be able to steer the agent, and the
    agent cannot be relied on to detect this.  The requirements in
-   Section 3.2 and Section 3.3 therefore do not depend on the agent
+   Section 4.2 and Section 4.3 therefore do not depend on the agent
    behaving correctly: the grant limits what a steered agent can do
    (AUTH-2, AUTH-6), and the check does not rest only on information
    that the agent supplies (VER-1).  Two values still come from the
@@ -674,7 +677,7 @@ Table of Contents
    it can be reused for another task, the limits it expresses are lost.
    Grants therefore need to be bound to the agent that holds them and to
    be protected in transit, in addition to being short-lived (AUTH-3)
-   and revocable (AUTH-4).  Section 3.2 does not yet contain a
+   and revocable (AUTH-4).  Section 4.2 does not yet contain a
    requirement for this.  Delegation adds the risk that an agent with
    little authority gets an agent with more authority to act for it.
    AUTH-5 addresses this only if the receiving agent acts under the
@@ -682,7 +685,7 @@ Table of Contents
 
    The other requirements depend on the enforcement point, so its
    compromise defeats them.  It has to be separate from the agent
-   (Section 3.3), and access to its policy and configuration deserves at
+   (Section 4.3), and access to its policy and configuration deserves at
    least the protection given to the targets.  When the enforcement
    point cannot be reached, the actions of agents can be refused,
    deferred or applied unchecked.  Refusing or deferring them is the
@@ -696,7 +699,7 @@ Table of Contents
    without authority can undo legitimate changes or disable automation
    across the network.  They need authentication and authorisation that
    do not depend on the agent, and their use needs to be recorded in the
-   same way as changes made for an agent (Section 3.5).  Automatic
+   same way as changes made for an agent (Section 4.5).  Automatic
    reversion (RBK-3) depends on measurements.  A party that can falsify
    or suppress those measurements can cause changes to be reverted, or
    can keep a harmful change in place.
@@ -724,16 +727,16 @@ Table of Contents
    security area on UE AI agents, the aspects related to AI for 6G
    architecture are for further study (clause 5.8.1).
 
-   The IETF mechanisms cited in Section 3 have their own security
+   The IETF mechanisms cited in Section 4 have their own security
    considerations, which apply when those mechanisms are used.
 
-6.  IANA Considerations
+7.  IANA Considerations
 
    This document has no IANA actions.
 
-7.  References
+8.  References
 
-7.1.  Normative References
+8.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -744,7 +747,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-7.2.  Informative References
+8.2.  Informative References
 
    [I-D.cui-dns-native-agent-naming-resolution]
               Cui, Y., "DNS-Native AI Agent Naming and Resolution", Work
