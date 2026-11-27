@@ -177,7 +177,7 @@ TODO Abstract
 
 TODO Introduction
 
-While 5G-Advanced treats intent as a formalized management service {{TS28.312]] to automate existing network operations, 6G reimagines intent as a primary interaction mechanism for both internal AI agents and external third-party applications.
+While 5G-Advanced treats intent as a formalized management service {{TS28.312}} to automate existing network operations, 6G reimagines intent as a primary interaction mechanism for both internal AI agents and external third-party applications.
 So for 6G, intent is primarily as a foundational mechanism for autonomous network management, AI-driven orchestration, and third-party service exposure. Rather than treating intent solely as an isolated network management tool, the study embeds intent-driven operations directly into the AI-native and service-centric 6G architecture.
 
 # Conventions and Definitions
@@ -185,6 +185,7 @@ So for 6G, intent is primarily as a foundational mechanism for autonomous networ
 {::boilerplate bcp14-tagged}
 
 VENKAT Attn Please: do not use SV#, KI# (SV's will disappear after the 3GPP document is finalized like TR 22.870, KI numbering is not relevant for IETF)
+
 # AI for 6G Architecture
 
 NW-Agent and Intent Serving Function
